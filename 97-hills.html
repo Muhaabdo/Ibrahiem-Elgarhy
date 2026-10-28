@@ -36,7 +36,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/img/brand/favicon.svg" type="image/svg+xml">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/almarai-700-ar.woff2">
-<link rel="preload" as="image" href="/assets/img/projects/97-hills/villa.webp" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/img/projects/97-hills/villa-s.webp" media="(max-width: 640px)" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/img/projects/97-hills/villa.webp" media="(min-width: 641px)" fetchpriority="high">
 <style>/* Palm Hills Dev — landing pages (hand-authored, no page-builder CSS). */
 
 /* ---------- Fonts (same files the rest of the site uses) ---------- */
@@ -724,7 +725,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
 <section class="hero">
- <img class="hero-bg" src="/assets/img/projects/97-hills/villa.webp" alt="97 Hills" fetchpriority="high">
+ <picture><source media="(max-width: 640px)" srcset="/assets/img/projects/97-hills/villa-s.webp"><img class="hero-bg" src="/assets/img/projects/97-hills/villa.webp" alt="97 Hills" fetchpriority="high"></picture>
  <div class="hero-in">
   <div class="eyebrow">القاهرة الجديدة</div>
   <h1><span class="ltr">97 Hills</span></h1>

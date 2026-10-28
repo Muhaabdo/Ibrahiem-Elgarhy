@@ -159,6 +159,21 @@ def org_ld(**extra):
     return d
 
 
+def small_of(src):
+    """Phone-sized sibling of a hero image (name-s.webp), if one exists."""
+    if not src:
+        return None
+    s = src.replace(".webp", "-s.webp")
+    return s if os.path.exists(os.path.join(HERE, "..", s.lstrip("/"))) else None
+
+
+def hero_tag(src, alt):
+    """Hero image: phones (<=640px) get the small file, larger screens the full one."""
+    sm = small_of(src)
+    tag = f'<img class="hero-bg" src="{src}" alt="{esc(alt)}" fetchpriority="high">'
+    return f'<picture><source media="(max-width: 640px)" srcset="{sm}">{tag}</picture>' if sm else tag
+
+
 def wa_prices():
     """Starting prices per project and unit, read by the lead form to put the price in the WhatsApp message."""
     return {p["name"]: {"from": money(p["price_from"]), "down": f'{p["down"]:g}',
@@ -427,7 +442,12 @@ def head(title, desc, canonical, alternates, lang, t, og_img=None, robots="max-i
           f'<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
           f'<meta property="og:image:alt" content="{esc(title)}">\n<meta name="twitter:card" content="summary_large_image">\n'
           f'<meta name="twitter:image" content="{og_img}">\n')
-    pre = f'<link rel="preload" as="image" href="{preload}" fetchpriority="high">\n' if preload else ""
+    sm = small_of(preload)
+    if sm:
+        pre = (f'<link rel="preload" as="image" href="{sm}" media="(max-width: 640px)" fetchpriority="high">\n'
+               f'<link rel="preload" as="image" href="{preload}" media="(min-width: 641px)" fetchpriority="high">\n')
+    else:
+        pre = f'<link rel="preload" as="image" href="{preload}" fetchpriority="high">\n' if preload else ""
     ldtag = f'<script type="application/ld+json">\n{ld}\n</script>\n' if ld else ""
     return f'''<!DOCTYPE html>
 <html lang="{lang}" dir="{t["dir"]}">
@@ -576,7 +596,7 @@ def project_page(slug, lang):
 
 <main>
 <section class="hero{"" if hero_img else " hero-plain"}">
- {f'<img class="hero-bg" src="{hero_img}" alt="{esc(title)}" fetchpriority="high">' if hero_img else ""}
+ {hero_tag(hero_img, title) if hero_img else ""}
  <div class="hero-in">
   <div class="eyebrow">{esc(p["area"][lang])}</div>
   <h1><span class="ltr">{esc(title)}</span></h1>
@@ -768,7 +788,7 @@ def home_page(lang):
 
 <main>
 <section class="hero{"" if hero_img else " hero-plain"}">
- {f'<img class="hero-bg" src="{hero_img}" alt="Palm Hills" fetchpriority="high">' if hero_img else ""}
+ {hero_tag(hero_img, "Palm Hills") if hero_img else ""}
  <div class="hero-in">
   <div class="eyebrow">{esc(t["home_eyebrow"])}</div>
   <h1 class="hero-h1-ar">{esc(t["home_h1"])}</h1>
