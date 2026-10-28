@@ -7,6 +7,8 @@ RewriteRule ^assets/img/_future/ - [F,L]
 
 # Old WordPress URLs on palmhillsdev.com (before Oct 2026) -> new pages
 RewriteRule ^hacienda-ras-al-hekma/?$ /hacienda-ras-el-hekma [R=301,L]
+RewriteRule ^badya-palm-hills/?$ /badya [R=301,L]
+RewriteRule ^palm-hills-projects/?$ / [R=301,L]
 RewriteRule ^about/?$ /about-us [R=301,L]
 RewriteRule ^privacy-policy/$ /privacy-policy [R=301,L]
 RewriteRule ^(feed|comments/feed|wp-json|xmlrpc\.php)(/.*)?$ / [R=301,L]

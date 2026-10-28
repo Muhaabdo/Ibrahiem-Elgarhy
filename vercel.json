@@ -2,10 +2,36 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/hacienda-ras-al-hekma", "destination": "/hacienda-ras-el-hekma", "permanent": true },
-    { "source": "/about", "destination": "/about-us", "permanent": true }
+    {
+      "source": "/hacienda-ras-al-hekma",
+      "destination": "/hacienda-ras-el-hekma",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about-us",
+      "permanent": true
+    },
+    {
+      "source": "/badya-palm-hills",
+      "destination": "/badya",
+      "permanent": true
+    },
+    {
+      "source": "/palm-hills-projects",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
-    { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
   ]
 }
