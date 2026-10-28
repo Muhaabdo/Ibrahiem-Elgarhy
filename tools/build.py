@@ -132,7 +132,10 @@ def unit_card(p, u, lang, t, title, launch=None):
      <div class="badges">{badges}</div>
      <div class="specs">{spec_html}</div>
      <div class="price">{price}</div>
-     <button class="btn btn-dark" type="button" data-cta="{"launch_card" if launch else "unit_card"}" data-unit="{esc(value)}">{ic("whatsapp")} {esc(t["cta_card"])}</button>
+     <div class="card-ctas">
+      <button class="btn btn-dark" type="button" data-cta="{"launch_card" if launch else "unit_card"}" data-unit="{esc(value)}">{ic("whatsapp")} {esc(t["cta_card"])}</button>
+      <a class="btn btn-call" href="tel:{SITE["tel"]}" data-track="call_click" data-loc="unit_card" data-unit="{esc(value)}" aria-label="{esc(t["call_aria"])}">{ic("phone")} {esc(t["call_short"])}</a>
+     </div>
     </div>
    </article>'''
 
@@ -457,7 +460,6 @@ def project_page(slug, lang):
                         and (p["location"]["points"] or h != "#location"))
     disc = p["discount"]
     offer_badge = (f'<div class="hero-offer">{ic("tag")} {esc(t["offer_badge"].format(p=disc["pct"], y=disc["years"]))}</div>' if disc else "")
-    millions = f'{p["price_from"] / 1e6:.1f}'
 
     feats = "".join(
         f'<div class="feat"><div class="feat-ic">{ic(f["ic"])}</div><div><h3>{esc(f[lang][0])}</h3><p>{esc(f[lang][1])}</p></div></div>'
@@ -565,7 +567,7 @@ def project_page(slug, lang):
   <div class="hero-stats">
    <div class="hero-stat"><b>{p["down"]}%</b><span>{esc(t["down"])}</span></div>
    <div class="hero-stat"><b>{p["years"]}</b><span>{esc(t["years"])}</span></div>
-   <div class="hero-stat"><b>{millions}</b><span>{esc(t["from_m"])}</span></div>
+   <div class="hero-stat hero-stat-price"><b>{money(p["price_from"])}</b><span>{esc(t["from_m"])}</span></div>
   </div>
   <button class="btn btn-cta btn-lg" type="button" data-cta="hero">{ic("whatsapp")} {esc(t["cta_main"])}</button>
   <p class="hero-note">{esc(t["hero_note"])}</p>
