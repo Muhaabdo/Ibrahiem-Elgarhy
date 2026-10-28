@@ -17,7 +17,7 @@ SITE = {
     "tel": "01031170002",
     "tel_intl": "+201031170002",
     # Google Apps Script web-app URL (tools/apps-script/Code.gs). Leads are NOT stored until this is set.
-    "endpoint": "",
+    "endpoint": "https://script.google.com/macros/s/AKfycbwD3OKZJiBYsY-ahhQhz6cLPxKzICg0PA1Foa992ClHHnlSmTlzccjCLCzVHDuox0899g/exec",
 }
 
 # Order = order of the "other projects" carousel.
