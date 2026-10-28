@@ -1,3 +1,9 @@
+# The old WordPress site used LiteSpeed Cache, and the server kept serving its stale copy of "/" to
+# crawlers (Googlebot, Facebook). This is a static site, so the server page cache is switched off.
+<IfModule LiteSpeed>
+CacheLookup off
+</IfModule>
+
 RewriteEngine On
 
 # Build scripts, source data and future-project image sources are not part of the public site.
