@@ -1,5 +1,5 @@
 /**
- * Palm Hills Dev (palmhillsdev.com) — lead capture (Google Sheets + email notification).
+ * palmhillsdev (palmhillsdev.com) — lead capture (Google Sheets + email notification).
  *
  * Setup (once):
  *  1. Create a new Google Sheet, then Extensions → Apps Script, and paste this file.
@@ -77,7 +77,7 @@ function doPost(e) {
 }
 
 function notify_(d) {
-  var subject = 'New lead — ' + (d.project || 'Palm Hills Dev') + (d.unit ? ' / ' + d.unit : '') + ' — ' + (d.name || '');
+  var subject = 'New lead — ' + (d.project || 'palmhillsdev') + (d.unit ? ' / ' + d.unit : '') + ' — ' + (d.name || '');
   var wa = 'https://wa.me/' + String(d.phone).replace(/\D/g, '');
   var lines = [
     'Name: ' + (d.name || ''),

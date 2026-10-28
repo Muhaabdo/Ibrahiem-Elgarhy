@@ -20,7 +20,7 @@ from pages_data import ABOUT, PRIVACY, PRIVACY_EMAIL, MISC  # noqa: E402
 
 LANGS = ("ar", "en")
 HOME_ON = True
-ASSET_V = "20261028a"
+ASSET_V = "20261028b"
 
 
 def ic(name):
@@ -143,7 +143,14 @@ def unit_card(p, u, lang, t, title, launch=None):
 def logo(lang):
     """Text wordmark. Deliberately no developer symbol: the site is not the official Palm Hills website."""
     return (f'<a class="logo" href="{url("", lang)}" aria-label="{esc(SITE["brand"])}">'
-            f'<strong>Palm Hills <span>Dev</span></strong><small>by {esc(SITE["owner"]["en"])}</small></a>')
+            f'<strong>palmhills<span>dev</span></strong><small>by {esc(SITE["owner"]["en"])}</small></a>')
+
+
+def wa_prices():
+    """Starting prices per project and unit, read by the lead form to put the price in the WhatsApp message."""
+    return {p["name"]: {"from": money(p["price_from"]), "down": f'{p["down"]:g}',
+                        "units": {u["name"]: money(u["price"]) for u in p["units"] if u.get("price")}}
+            for p in PROJECTS.values() if p.get("ready")}
 
 
 def footer(lang, t):
@@ -151,7 +158,7 @@ def footer(lang, t):
  <div class="wrap">
   <div class="ft-top">
    <div>
-    <div class="ft-logo">Palm Hills <span>Dev</span></div>
+    <div class="ft-logo">palmhills<span>dev</span></div>
     <div class="ft-acr">by {esc(SITE["owner"]["en"])}</div>
     <p class="ft-tag">{esc(t["ft_tag"])}</p>
    </div>
@@ -452,7 +459,7 @@ def project_page(slug, lang):
         "thankYou": url("thank-you", lang),
         "wa": SITE["wa"],
            "t": {"submit": t["f_submit"], "sending": t["f_sending"], "noCountry": t["no_country"], "close": t["close"],
-                 "waMsg": t["wa_msg"], "waMsgGeneric": t["wa_msg_generic"]},
+                 "waMsg": t["wa_msg"], "waMsgGeneric": t["wa_msg_generic"], "waUnit": t["wa_d_unit"], "waProj": t["wa_d_proj"]},
     }
     has_more = any(o.get("ready") for s_, o in PROJECTS.items() if s_ != slug)
     nav_links = "".join(f'<a href="{h}">{esc(x)}</a>' for h, x in t["nav"]
@@ -641,7 +648,8 @@ def project_page(slug, lang):
 {footer(lang, t)}
 
 <div class="stick" role="region" aria-label="{esc(t["stick_cta"])}">
- <div class="stick-txt"><small>{esc(title)} — {esc(t["stick_from"])}</small><b>{money(p["price_from"])}</b> <small style="display:inline">{esc(t["egp"])}</small></div>
+ <div class="stick-txt"><small>{esc(t["stick_from"])}</small><b>{money(p["price_from"])}</b> <small style="display:inline">{esc(t["egp"])}</small></div>
+ <a class="stick-call" href="tel:{SITE["tel"]}" data-track="call_click" data-loc="sticky_bar" aria-label="{esc(t["call_aria"])}">{ic("phone")}</a>
  <button class="btn btn-cta" type="button" data-cta="sticky_bar">{ic("whatsapp")} {esc(t["stick_cta"])}</button>
 </div>
 
@@ -660,7 +668,7 @@ def project_page(slug, lang):
 
 {cookie(t)}
 
-<script>window.SITE_CFG={json.dumps(cfg, ensure_ascii=False)};</script>
+<script>window.SITE_CFG={json.dumps({**cfg, "prices": wa_prices()}, ensure_ascii=False)};</script>
 <script src="/assets/js/countries.js?v={ASSET_V}" defer></script>
 <script src="/assets/js/project.js?v={ASSET_V}" defer></script>
 </body>
@@ -712,7 +720,7 @@ def home_page(lang):
            "endpoint": SITE["endpoint"], "thankYou": url("thank-you", lang),
            "wa": SITE["wa"],
            "t": {"submit": t["f_submit"], "sending": t["f_sending"], "noCountry": t["no_country"], "close": t["close"],
-                 "waMsg": t["wa_msg"], "waMsgGeneric": t["wa_msg_generic"]}}
+                 "waMsg": t["wa_msg"], "waMsgGeneric": t["wa_msg_generic"], "waUnit": t["wa_d_unit"], "waProj": t["wa_d_proj"]}}
     nav_links = "".join(f'<a href="{h}">{esc(x)}</a>' for h, x in t["home_nav"])
     and_ = " و" if lang == "ar" else " and "
     titles = [p["title"] for _, p in ps]
@@ -839,7 +847,7 @@ def home_page(lang):
 
 {cookie(t)}
 
-<script>window.SITE_CFG={json.dumps(cfg, ensure_ascii=False)};</script>
+<script>window.SITE_CFG={json.dumps({**cfg, "prices": wa_prices()}, ensure_ascii=False)};</script>
 <script src="/assets/js/countries.js?v={ASSET_V}" defer></script>
 <script src="/assets/js/project.js?v={ASSET_V}" defer></script>
 </body>
@@ -856,7 +864,7 @@ def simple_shell(lang, t, slug, title, desc, body, robots="max-image-preview:lar
            "endpoint": SITE["endpoint"], "thankYou": url("thank-you", lang),
            "wa": SITE["wa"],
            "t": {"submit": t["f_submit"], "sending": t["f_sending"], "noCountry": t["no_country"], "close": t["close"],
-                 "waMsg": t["wa_msg"], "waMsgGeneric": t["wa_msg_generic"]}}
+                 "waMsg": t["wa_msg"], "waMsgGeneric": t["wa_msg_generic"], "waUnit": t["wa_d_unit"], "waProj": t["wa_d_proj"]}}
     nav_links = "".join(f'<a href="{h}">{esc(x)}</a>' for h, x in m["nav"])
     html = head(title, desc, url(slug, lang, True), alts, lang, t, robots=robots, ld=ld)
     html += f'''{lang_bar(slug, lang, t) if alternates else ""}
@@ -891,7 +899,7 @@ def simple_shell(lang, t, slug, title, desc, body, robots="max-image-preview:lar
 
 {cookie(t)}
 
-<script>window.SITE_CFG={json.dumps(cfg, ensure_ascii=False)};</script>
+<script>window.SITE_CFG={json.dumps({**cfg, "prices": wa_prices()}, ensure_ascii=False)};</script>
 <script src="/assets/js/countries.js?v={ASSET_V}" defer></script>
 <script src="/assets/js/project.js?v={ASSET_V}" defer></script>
 </body>
@@ -1010,7 +1018,7 @@ def thank_you(lang):
     t = T[lang]
     alternates = [("ar", url("thank-you", "ar", True)), ("en", url("thank-you", "en", True))]
     cfg = {"lang": lang, "wa": SITE["wa"], "t": {
-        "waMsg": t["wa_msg"], "waMsgGeneric": t["wa_msg_generic"], "backTo": t["ty_back"],
+        "waMsg": t["wa_msg"], "waMsgGeneric": t["wa_msg_generic"], "waUnit": t["wa_d_unit"], "waProj": t["wa_d_proj"], "backTo": t["ty_back"],
         "redirecting": t["ty_redirecting"], "notOpened": t["ty_not_opened"], "openedNewTab": t["ty_new_tab"], "clickToOpen": t["ty_click"],
         "titleGeneric": t["ty_title_generic"], "textGeneric": t["ty_text_generic"], "titleProject": t["ty_title_p"]}}
     html = head(t["ty_seo_title"], t["ty_text_generic"], url("thank-you", lang, True), alternates, lang, t,
@@ -1029,7 +1037,7 @@ def thank_you(lang):
   <a class="ty-back" id="tyBack" href="{url("", lang)}">{ic("arrow-r" if t["dir"] == "rtl" else "arrow-l")} <span id="tyBackText">{esc(t["ty_back_generic"])}</span></a>
  </div>
 </main>
-<script>window.SITE_CFG={json.dumps(cfg, ensure_ascii=False)};</script>
+<script>window.SITE_CFG={json.dumps({**cfg, "prices": wa_prices()}, ensure_ascii=False)};</script>
 <script src="/assets/js/thank-you.js?v={ASSET_V}" defer></script>
 </body>
 </html>

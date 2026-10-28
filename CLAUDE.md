@@ -1,4 +1,4 @@
-# Palm Hills Dev — palmhillsdev.com (Ibrahim El Garhy)
+# palmhillsdev — palmhillsdev.com (Ibrahim El Garhy)
 
 Owner: Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. The site is his marketing platform, NOT the
 official Palm Hills site and NOT an "independent broker" — keep that wording wherever identity is stated.

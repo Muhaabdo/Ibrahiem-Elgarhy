@@ -1,6 +1,6 @@
-# Palm Hills Dev
+# palmhillsdev
 
-> Palm Hills Dev (palmhillsdev.com) is a marketing platform for Palm Hills Developments projects in Egypt, owned and run by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. It is not the official Palm Hills website. It lists available units, prices and payment plans; contracts are signed directly with Palm Hills Developments.
+> palmhillsdev (palmhillsdev.com) is a marketing platform for Palm Hills Developments projects in Egypt, owned and run by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. It is not the official Palm Hills website. It lists available units, prices and payment plans; contracts are signed directly with Palm Hills Developments.
 
 Prices are in Egyptian pounds (EGP), are indicative, and may be changed by the developer without notice.
 Contact: phone / WhatsApp +201031170002, email ibrahimelgarhy1987@gmail.com. The site is available in Arabic (https://palmhillsdev.com/) and English (https://palmhillsdev.com/en/).
@@ -13,7 +13,7 @@ Contact: phone / WhatsApp +201031170002, email ibrahimelgarhy1987@gmail.com. The
 
 ## About
 
-- [About Palm Hills Dev](https://palmhillsdev.com/en/about-us): who runs the platform and how to contact him.
+- [About palmhillsdev](https://palmhillsdev.com/en/about-us): who runs the platform and how to contact him.
 - [Privacy policy](https://palmhillsdev.com/en/privacy-policy): how enquiry data is collected and used.
 
 ## Hacienda Ras El Hekma

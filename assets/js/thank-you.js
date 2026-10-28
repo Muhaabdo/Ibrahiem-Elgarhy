@@ -6,6 +6,15 @@
 (function () {
   "use strict";
   var CFG = window.SITE_CFG || {}, T = CFG.t || {};
+  /* WhatsApp text: project + unit + its starting price, so the first message already says what the client looked at. */
+  function waText(T, prices, project, unit) {
+    if (!project) return T.waMsgGeneric || "";
+    var pr = (prices || {})[project] || {}, d = "";
+    if (unit && pr.units && pr.units[unit]) d = (T.waUnit || "").replace("{price}", pr.units[unit]);
+    else if (!unit && pr.from) d = (T.waProj || "").replace("{price}", pr.from).replace("{down}", pr.down);
+    return (T.waMsg || "").replace("{p}", project).replace("{u}", unit ? " — " + unit : "").replace("{d}", d);
+  }
+
   var REDIRECT_MS = 1800;
   var $ = function (s) { return document.querySelector(s); };
   window.dataLayer = window.dataLayer || [];
@@ -15,7 +24,7 @@
   function save() { try { sessionStorage.setItem("phd_lead", JSON.stringify(lead)); } catch (e) {} }
 
   var label = lead ? (lead.project + (lead.unit ? " · " + lead.unit : "")) : "";
-  var msg = lead && lead.project ? (T.waMsg || "").replace("{p}", lead.project).replace("{u}", lead.unit ? " (" + lead.unit + ")" : "") : (T.waMsgGeneric || "");
+  var msg = waText(T, CFG.prices, lead && lead.project, lead && lead.unit);
   var waUrl = "https://wa.me/" + CFG.wa + "?text=" + encodeURIComponent(msg);
 
   var btn = $("#tyWa"), back = $("#tyBack"), ctx = $("#tyCtx"), count = $("#tyCount"), bar = $("#tyBar");

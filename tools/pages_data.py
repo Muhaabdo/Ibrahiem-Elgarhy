@@ -3,8 +3,8 @@
 
 ABOUT = {
     "ar": {
-        "seo_title": "من نحن – Palm Hills Dev | إبراهيم الجارحي",
-        "seo_desc": "Palm Hills Dev منصة تسويقية لمشاريع بالم هيلز يملكها ويديرها إبراهيم الجارحي، نائب مدير مبيعات في بالم هيلز. أسعار وخطط سداد محدّثة وتواصل مباشر.",
+        "seo_title": "من نحن – palmhillsdev | إبراهيم الجارحي",
+        "seo_desc": "palmhillsdev منصة تسويقية لمشاريع بالم هيلز يملكها ويديرها إبراهيم الجارحي، نائب مدير مبيعات في بالم هيلز. أسعار وخطط سداد محدّثة وتواصل مباشر.",
         "eyebrow": "من نحن",
         "h1": "تواصل مباشر مع فريق مبيعات بالم هيلز",
         "sub": "palmhillsdev.com منصة تسويقية يملكها ويديرها إبراهيم الجارحي — وليست الموقع الرسمي لشركة بالم هيلز.",
@@ -34,8 +34,8 @@ ABOUT = {
         "note": "palmhillsdev.com منصة تسويقية يملكها ويديرها إبراهيم الجارحي، وليست الموقع الرسمي لشركة بالم هيلز للتطوير العقاري. الأسعار وخطط السداد والمواصفات للاسترشاد وقابلة للتغيير حسب سياسة الشركة ومدى توافر الوحدات، والتعاقد النهائي يتم مباشرةً مع الشركة.",
     },
     "en": {
-        "seo_title": "About Us – Palm Hills Dev | Ibrahim El Garhy",
-        "seo_desc": "Palm Hills Dev is a marketing platform for Palm Hills projects, owned and run by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. Up-to-date prices, payment plans and direct contact.",
+        "seo_title": "About Us – palmhillsdev | Ibrahim El Garhy",
+        "seo_desc": "palmhillsdev is a marketing platform for Palm Hills projects, owned and run by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. Up-to-date prices, payment plans and direct contact.",
         "eyebrow": "About us",
         "h1": "Talk directly to the Palm Hills sales team",
         "sub": "palmhillsdev.com is a marketing platform owned and run by Ibrahim El Garhy — it is not the official Palm Hills website.",
@@ -68,11 +68,11 @@ ABOUT = {
 
 PRIVACY = {
     "ar": {
-        "seo_title": "سياسة الخصوصية – Palm Hills Dev",
-        "seo_desc": "سياسة الخصوصية لمنصة Palm Hills Dev: البيانات اللي بنجمعها، وإزاي بنستخدمها ونحميها، ومع مين بنشاركها، وحقوقك عليها.",
-        "eyebrow": "Palm Hills Dev", "h1": "سياسة الخصوصية", "sub": "إزاي بنجمع بياناتك ونستخدمها ونحميها",
+        "seo_title": "سياسة الخصوصية – palmhillsdev",
+        "seo_desc": "سياسة الخصوصية لمنصة palmhillsdev: البيانات اللي بنجمعها، وإزاي بنستخدمها ونحميها، ومع مين بنشاركها، وحقوقك عليها.",
+        "eyebrow": "palmhillsdev", "h1": "سياسة الخصوصية", "sub": "إزاي بنجمع بياناتك ونستخدمها ونحميها",
         "updated": "آخر تحديث: أكتوبر 2026",
-        "intro": "توضح هذه السياسة كيف تتعامل منصة Palm Hills Dev (palmhillsdev.com) مع بياناتك الشخصية عند استخدامك للموقع أو تواصلك معنا. باستخدامك للموقع فأنت توافق على ما ورد في هذه السياسة.",
+        "intro": "توضح هذه السياسة كيف تتعامل منصة palmhillsdev (palmhillsdev.com) مع بياناتك الشخصية عند استخدامك للموقع أو تواصلك معنا. باستخدامك للموقع فأنت توافق على ما ورد في هذه السياسة.",
         "sections": [
             ("من نحن", [
                 ("p", "palmhillsdev.com منصة تسويقية وإعلامية يملكها ويديرها إبراهيم الجارحي، نائب مدير مبيعات في بالم هيلز للتطوير العقاري. هذا الموقع ليس الموقع الرسمي لشركة بالم هيلز، وهو المسؤول عن البيانات التي تُجمع من خلاله."),
@@ -117,11 +117,11 @@ PRIVACY = {
         "contact_p": "لأي استفسار أو طلب متعلق ببياناتك، راسل إبراهيم الجارحي على:",
     },
     "en": {
-        "seo_title": "Privacy Policy – Palm Hills Dev",
-        "seo_desc": "The Palm Hills Dev privacy policy: what data we collect, how we use and protect it, who we share it with, and your rights.",
-        "eyebrow": "Palm Hills Dev", "h1": "Privacy Policy", "sub": "How we collect, use and protect your data",
+        "seo_title": "Privacy Policy – palmhillsdev",
+        "seo_desc": "The palmhillsdev privacy policy: what data we collect, how we use and protect it, who we share it with, and your rights.",
+        "eyebrow": "palmhillsdev", "h1": "Privacy Policy", "sub": "How we collect, use and protect your data",
         "updated": "Last updated: October 2026",
-        "intro": "This policy explains how Palm Hills Dev (palmhillsdev.com) handles your personal data when you use the website or contact us. By using the website you agree to this policy.",
+        "intro": "This policy explains how palmhillsdev (palmhillsdev.com) handles your personal data when you use the website or contact us. By using the website you agree to this policy.",
         "sections": [
             ("Who we are", [
                 ("p", "palmhillsdev.com is a marketing and information platform owned and run by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills Developments. It is not the official Palm Hills website, and it is responsible for the data collected through it."),
@@ -171,8 +171,8 @@ PRIVACY_EMAIL = "ibrahimelgarhy1987@gmail.com"
 
 MISC = {
     "ar": {"nav": [("/", "الرئيسية"), ("/#projects", "المشاريع"), ("/about-us", "من نحن"), ("/privacy-policy", "سياسة الخصوصية")],
-           "nf_title": "الصفحة غير موجودة – Palm Hills Dev", "nf_h": "الصفحة دي مش موجودة", "nf_p": "ممكن يكون الرابط اتغير أو الصفحة اتنقلت.", "nf_cta": "الرجوع للرئيسية", "nf_cta2": "شوف المشاريع"},
+           "nf_title": "الصفحة غير موجودة – palmhillsdev", "nf_h": "الصفحة دي مش موجودة", "nf_p": "ممكن يكون الرابط اتغير أو الصفحة اتنقلت.", "nf_cta": "الرجوع للرئيسية", "nf_cta2": "شوف المشاريع"},
     "en": {"nav": [("/en/", "Home"), ("/en/#projects", "Projects"), ("/en/about-us", "About us"), ("/en/privacy-policy", "Privacy Policy")],
-           "nf_title": "Page not found – Palm Hills Dev", "nf_h": "This page doesn't exist", "nf_p": "The link may have changed or the page may have moved.", "nf_cta": "Back to home", "nf_cta2": "Browse projects"},
+           "nf_title": "Page not found – palmhillsdev", "nf_h": "This page doesn't exist", "nf_p": "The link may have changed or the page may have moved.", "nf_cta": "Back to home", "nf_cta2": "Browse projects"},
 }
 

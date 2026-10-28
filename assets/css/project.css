@@ -513,3 +513,7 @@ ul{list-style:none}
 #units .cards{grid-template-columns:repeat(3,1fr);gap:20px}
 @media (max-width:1100px){#units .cards{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){#units .cards{grid-template-columns:1fr}}
+
+/* Sticky bar call: icon-only, smaller than the WhatsApp button */
+.stick-call{flex:0 0 auto;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,.3);color:#fff;text-decoration:none;font-size:16px;margin-inline-end:8px}
+.stick-call:active{background:rgba(255,255,255,.1)}

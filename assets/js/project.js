@@ -5,6 +5,15 @@
 (function () {
   "use strict";
   var CFG = window.SITE_CFG || {};
+  /* WhatsApp text: project + unit + its starting price, so the first message already says what the client looked at. */
+  function waText(T, prices, project, unit) {
+    if (!project) return T.waMsgGeneric || "";
+    var pr = (prices || {})[project] || {}, d = "";
+    if (unit && pr.units && pr.units[unit]) d = (T.waUnit || "").replace("{price}", pr.units[unit]);
+    else if (!unit && pr.from) d = (T.waProj || "").replace("{price}", pr.from).replace("{down}", pr.down);
+    return (T.waMsg || "").replace("{p}", project).replace("{u}", unit ? " — " + unit : "").replace("{d}", d);
+  }
+
   var LANG = CFG.lang || "ar";
   var T = CFG.t || {};
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -312,13 +321,13 @@
       if (DESKTOP && CFG.wa) {
         try {
           waTab = window.open("", "_blank");
-          if (waTab) waTab.document.write('<!doctype html><meta charset="utf-8"><title>WhatsApp</title><body style="margin:0;display:flex;align-items:center;justify-content:center;height:100vh;font:16px system-ui;background:#092A21;color:#E4CE9E">' + (T.sending || "…") + "</body>");
+          if (waTab) waTab.document.write('<!doctype html><meta charset="utf-8"><title>WhatsApp</title><body style="margin:0;display:flex;align-items:center;justify-content:center;height:100vh;font:16px system-ui;background:#0A0A0A;color:#fff">' + (T.sending || "…") + "</body>");
         } catch (err) { waTab = null; }
       }
       function done() {
         var opened = false;
         if (waTab && !waTab.closed) {
-          var msg = project ? (T.waMsg || "").replace("{p}", project).replace("{u}", unit ? " (" + unit + ")" : "") : (T.waMsgGeneric || "");
+          var msg = waText(T, CFG.prices, project, unit);
           try { waTab.location.href = "https://wa.me/" + CFG.wa + "?text=" + encodeURIComponent(msg); opened = true; } catch (err) {}
         }
         try {
