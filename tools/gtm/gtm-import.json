@@ -320,7 +320,7 @@
         "containerId": "0",
         "parentFolderId": "900",
         "tagId": "303",
-        "name": "GA4 Event - form_start",
+        "name": "GA4 Event - lead_form_start",
         "type": "gaawe",
         "parameter": [
           {
@@ -331,7 +331,7 @@
           {
             "type": "TEMPLATE",
             "key": "eventName",
-            "value": "form_start"
+            "value": "lead_form_start"
           },
           {
             "type": "TEMPLATE",
@@ -1225,7 +1225,7 @@
         "containerId": "0",
         "parentFolderId": "900",
         "triggerId": "203",
-        "name": "CE - form_start",
+        "name": "CE - lead_form_start",
         "type": "CUSTOM_EVENT",
         "customEventFilter": [
           {
@@ -1239,7 +1239,7 @@
               {
                 "type": "TEMPLATE",
                 "key": "arg1",
-                "value": "form_start"
+                "value": "lead_form_start"
               }
             ]
           }

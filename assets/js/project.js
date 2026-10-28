@@ -1,7 +1,7 @@
 /* Palm Hills Dev — landing pages.
    Lead flow: CTA -> form -> Google Sheet -> /thank-you -> WhatsApp.
    Every step pushes a dataLayer event so GTM/GA4 can build the funnel:
-   cta_click -> form_open -> form_start -> (form_error) -> generate_lead -> thank_you_view -> whatsapp_redirect */
+   cta_click -> form_open -> lead_form_start -> (form_error) -> generate_lead -> thank_you_view -> whatsapp_redirect */
 (function () {
   "use strict";
   var CFG = window.SITE_CFG || {};
@@ -265,7 +265,7 @@
       if (!el) return;
       el.addEventListener("input", function () {
         mark(el, false);
-        if (!form._started) { form._started = true; track("form_start", { form_location: form.getAttribute("data-loc") || ctx.loc, unit_type: currentUnit() }); }
+        if (!form._started) { form._started = true; track("lead_form_start", { form_location: form.getAttribute("data-loc") || ctx.loc, unit_type: currentUnit() }); }
       });
       el.addEventListener("change", function () { mark(el, false); });
     });
