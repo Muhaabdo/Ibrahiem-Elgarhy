@@ -517,3 +517,5 @@ ul{list-style:none}
 /* Sticky bar call: icon-only, smaller than the WhatsApp button */
 .stick-call{flex:0 0 auto;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,.3);color:#fff;text-decoration:none;font-size:16px;margin-inline-end:8px}
 .stick-call:active{background:rgba(255,255,255,.1)}
+/* Hero eyebrow stays readable over bright photos */
+.hero .eyebrow{color:var(--gold-soft);text-shadow:0 1px 10px rgba(0,0,0,.7)}
