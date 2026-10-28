@@ -144,8 +144,8 @@ PROJECTS = {
         "types": {"ar": ["شقق", "تاون هاوس", "فيلات"], "en": ["Apartments", "Town Houses", "Villas"]},
         "img": "badya", "hero": "hero", "card": "hero-s", "about_img": "apartments-garden",
         "units_note": {
-            "ar": "أسعار الشقق شاملة التشطيب. التاون هاوس والفيلات بتتسلم Core & Shell. بعض الوحدات عليها اشتراك نادي 320,000 جنيه غير داخل في السعر.",
-            "en": "Apartment prices include finishing. Town houses and villas are delivered core & shell. Some units carry a 320,000 EGP club membership that is not included in the price.",
+            "ar": "أسعار الشقق شاملة التشطيب. التاون هاوس والفيلات بتتسلم Core & Shell.",
+            "en": "Apartment prices include finishing. Town houses and villas are delivered core & shell.",
         },
         "plans": [
             {"name": {"ar": "الخطة الأولى", "en": "Option 1"},
