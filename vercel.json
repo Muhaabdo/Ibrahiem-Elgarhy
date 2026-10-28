@@ -2,30 +2,10 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    {
-      "source": "/palm-hills-projects",
-      "destination": "/palm-hills-october",
-      "permanent": true
-    },
-    {
-      "source": "/palm-hills-projects-west",
-      "destination": "/palm-hills-october",
-      "permanent": true
-    },
-    {
-      "source": "/palm-hills-projects-east",
-      "destination": "/palm-hills-october",
-      "permanent": true
-    },
-    {
-      "source": "/hacienda-ras-al-hekma",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/north-coast-project",
-      "destination": "/",
-      "permanent": true
-    }
+    { "source": "/hacienda-ras-al-hekma", "destination": "/hacienda-ras-el-hekma", "permanent": true },
+    { "source": "/about", "destination": "/about-us", "permanent": true }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }] }
   ]
 }

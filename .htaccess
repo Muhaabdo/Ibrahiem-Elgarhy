@@ -1,12 +1,15 @@
 RewriteEngine On
 
 # Build scripts, source data and future-project image sources are not part of the public site.
-RewriteRule ^(tools|data)/ - [F,L]
+RewriteRule ^(tools|data|docs)/ - [F,L]
+RewriteRule ^(CLAUDE|README)\.md$ - [F,L]
 RewriteRule ^assets/img/_future/ - [F,L]
 
-# Old pages (removed Oct 2026) -> closest new page
-RewriteRule ^palm-hills-projects(-west|-east)?(\.html)?/?$ /palm-hills-october [R=301,L]
-RewriteRule ^(hacienda-ras-al-hekma|north-coast-project)(\.html)?/?$ / [R=301,L]
+# Old WordPress URLs on palmhillsdev.com (before Oct 2026) -> new pages
+RewriteRule ^hacienda-ras-al-hekma/?$ /hacienda-ras-el-hekma [R=301,L]
+RewriteRule ^about/?$ /about-us [R=301,L]
+RewriteRule ^privacy-policy/$ /privacy-policy [R=301,L]
+RewriteRule ^(feed|comments/feed|wp-json|xmlrpc\.php)(/.*)?$ / [R=301,L]
 
 # If the request already resolves to a real file or directory, leave it alone
 # (assets, images, this file itself, etc.).

@@ -1,163 +1,115 @@
 # Palm Hills Dev
 
-> VIBE Real Estate is an independent real-estate broker in Egypt. It presents residential projects from Egypt's leading developers, helps buyers compare units, prices and payment plans, and connects them with the developer. VIBE is not a developer: contracts are signed directly with the developer.
+> Palm Hills Dev (palmhillsdev.com) is a marketing platform for Palm Hills Developments projects in Egypt, owned and run by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. It is not the official Palm Hills website. It lists available units, prices and payment plans; contracts are signed directly with Palm Hills Developments.
 
 Prices are in Egyptian pounds (EGP), are indicative, and may be changed by the developer without notice.
-Contact: phone / WhatsApp +201031170002. The site is available in Arabic (https://palmhillsdev.com/) and English (https://palmhillsdev.com/en/).
+Contact: phone / WhatsApp +201031170002, email ibrahimelgarhy1987@gmail.com. The site is available in Arabic (https://palmhillsdev.com/) and English (https://palmhillsdev.com/en/).
 
-## Projects (Palm Hills Developments, West Cairo)
+## Projects (Palm Hills Developments)
 
-- [PX Compound](https://palmhillsdev.com/en/px): PX is Palm Hills Developments' newest community in West Cairo, set on the highest point of Palm Hills October — which gives its homes open views across the whole area. From EGP 13,144,000, 5% down payment, up to 10 years installments, delivery 2028.
-- [Palm Parks](https://palmhillsdev.com/en/palm-parks): Palm Parks is a Palm Hills Developments community in West Cairo, right off the Dahshur Link, designed as a quiet low-density neighbourhood with open space between buildings. From EGP 17,807,000, 5% down payment, up to 8 years installments, delivery 2029.
-- [Crown Extension](https://palmhillsdev.com/en/crown-extension): Crown Extension is the extension of The Crown by Palm Hills Developments at the heart of Palm Hills October, close to the 26th of July Axis and the Cairo–Alexandria Desert Road. From EGP 30,521,000, 5% down payment, up to 8 years installments, delivery 2030.
-- [Palm Hills One](https://palmhillsdev.com/en/palm-hills-one): Palm Hills One is a villa community by Palm Hills Developments at The Hill in the heart of West Cairo, adjacent to Palm Hills October and minutes from the Cairo–Alexandria Desert Road. From EGP 47,549,000, 5% down payment, up to 8 years installments, delivery 2030.
-- [Bamboo III](https://palmhillsdev.com/en/bamboo-iii): Bamboo III is the third phase of Bamboo by Palm Hills Developments, inside Palm Hills October near Gezira Club and overlooking the 26th of July Axis. From EGP 27,457,000, 5% down payment, up to 10 years installments, delivery 2029.
+- [Hacienda Ras El Hekma](https://palmhillsdev.com/en/hacienda-ras-el-hekma): Ras El Hekma — North Coast. From EGP 12,032,000, 5% down payment, up to 10 years installments, delivery 2030.
+- [Badya Palm Hills](https://palmhillsdev.com/en/badya): 6th of October — West Cairo. From EGP 6,892,600, 1.5% down payment, up to 12 years installments, delivery 2028 – 2031.
+- [97 Hills](https://palmhillsdev.com/en/97-hills): East Cairo. From EGP 28,684,000, 2.8% down payment, up to 10 years installments, delivery 2030.
 
-## Company
+## About
 
-- [About VIBE Real Estate](https://palmhillsdev.com/en/about-us): who we are and how we work as an independent broker.
+- [About Palm Hills Dev](https://palmhillsdev.com/en/about-us): who runs the platform and how to contact him.
 - [Privacy policy](https://palmhillsdev.com/en/privacy-policy): how enquiry data is collected and used.
-- [Palm Hills October projects](https://palmhillsdev.com/en/palm-hills-october): all five projects, a side-by-side price comparison and a guide by home type.
-- [Home](https://palmhillsdev.com/en/): who VIBE is, the projects and general questions.
 
-## PX Compound
+## Hacienda Ras El Hekma
 
-Page: https://palmhillsdev.com/en/px (Arabic: https://palmhillsdev.com/px)
+Page: https://palmhillsdev.com/en/hacienda-ras-el-hekma (Arabic: https://palmhillsdev.com/hacienda-ras-el-hekma)
 
-PX is Palm Hills Developments' newest community in West Cairo, set on the highest point of Palm Hills October — which gives its homes open views across the whole area. The project spans around 370 feddans with a master plan by Chapman Taylor, split into residential zones of apartments and town houses, with a clubhouse, a commercial hub and walking trails inside the compound.
+Hacienda Ras El Hekma is Palm Hills Developments' newest North Coast destination, covering around 1,400 feddans in Ras El Hekma with a 4.8 km sandy beachfront. The master plan is by OBMI and is laid out around lagoons and green spaces, with beach homes, chalets, twin houses and villas set in rows stepping back from the sea. All units are delivered fully finished with air conditioning and kitchens, with delivery expected in 2030.
 
 | Unit | Size | Price from (EGP) |
 |---|---|---|
-| 1 Bedroom Apartment | 60 – 78 m² | 13,144,000 |
-| 2 Bedroom Apartment | 113 – 140 m² | 19,809,000 |
-| 3 Bedroom Apartment | 144 – 172 m² | 25,419,000 |
-| Town House | 201 – 214 m² | 28,528,000 |
-| Townhouse Middle | Built-up area 201 m², land area 212 m² | 32,638,000 |
-| Townhouse Corner | Built-up area 211 m², land area 216 m² | 34,500,000 |
-| Villa 4 | Built-up area 240 m², land area 282 m² | 37,000,000 |
-| Villa 3 | Built-up area 246 m², land area 299 m² | 38,800,000 |
-| Villa 1 | Built-up area 314 m², land area 420 – 470 m² | 53,000,000 |
-| Villa 5 | Built-up area 428 m², land area 545 – 596 m² | On request |
+| Beach Home 1 Bedroom | 65 m² | 12,032,000 |
+| Beach Home 2 Bedrooms | 105 – 107 m² | 15,278,000 |
+| Beach Home 3 Bedrooms | 143 m² | 18,131,000 |
+| Seabreeze Junior Chalet | 141 m² | 23,581,000 |
+| Seabreeze Senior Chalet | 167 m² | 27,171,000 |
+| Seabreeze Grand Chalet | 202 – 215 m² | 33,078,000 |
+| Duo Twin | Built-up area 253 m², land area 320 m² | 47,933,000 |
+| Crest Villa | Built-up area 312 m², land area 419 m² | 82,188,000 |
+| Coastal Villa | Built-up area 519 m², land area 800 m² | 130,058,000 |
+| Bayline Villa | Built-up area 344 m², land area 841 m² | 170,389,000 |
+| Beachfront Villa | Built-up area 344 m², land area 942 m² | 202,498,000 |
 
-**Where is PX Compound located?** PX sits at the heart of Palm Hills October, connected to West Cairo's main roads and surrounded by Palm Hills communities such as The Crown and Palm Parks. It is developed by Palm Hills Developments.
+**Where is Hacienda Ras El Hekma located?** Hacienda Ras El Hekma is in Ras El Hekma on the International Coastal Road of Egypt's North Coast, one of the calmest and clearest bays on the Mediterranean. It is developed by Palm Hills Developments.
 
-**What are the starting prices in PX Compound?** Prices start from EGP 13,144,000. Available units: 1 Bedroom Apartment from EGP 13,144,000; 2 Bedroom Apartment from EGP 19,809,000; 3 Bedroom Apartment from EGP 25,419,000; Town House from EGP 28,528,000.
+**What are the starting prices in Hacienda Ras El Hekma?** Prices start from EGP 12,032,000. Available units: Beach Home 1 Bedroom from EGP 12,032,000; Beach Home 2 Bedrooms from EGP 15,278,000; Beach Home 3 Bedrooms from EGP 18,131,000; Seabreeze Junior Chalet from EGP 23,581,000; Seabreeze Senior Chalet from EGP 27,171,000; Seabreeze Grand Chalet from EGP 33,078,000; Duo Twin from EGP 47,933,000; Crest Villa from EGP 82,188,000; Coastal Villa from EGP 130,058,000; Bayline Villa from EGP 170,389,000; Beachfront Villa from EGP 202,498,000.
 
-**What payment plans are available in PX Compound?** 5% down payment with installments over up to 10 years. A discount of up to 40% is available on the 6-year plan. The Palm Gardens phase: 5% down payment over up to 7.5 years.
+**What payment plans are available in Hacienda Ras El Hekma?** Payment plan: 5% down payment, 5% after 3 months; installments over 10 years at the original price, or 8 years with 10% off, or 6 years with 20% off.
 
-**What unit types and sizes are available in PX Compound?** 1 Bedroom Apartment (60 – 78 m²); 2 Bedroom Apartment (113 – 140 m²); 3 Bedroom Apartment (144 – 172 m²); Town House (201 – 214 m²).
+**What unit types and sizes are available in Hacienda Ras El Hekma?** Beach Home 1 Bedroom (65 m²); Beach Home 2 Bedrooms (105 – 107 m²); Beach Home 3 Bedrooms (143 m²); Seabreeze Junior Chalet (141 m²); Seabreeze Senior Chalet (167 m²); Seabreeze Grand Chalet (202 – 215 m²); Duo Twin (Built-up area 253 m², land area 320 m²); Crest Villa (Built-up area 312 m², land area 419 m²); Coastal Villa (Built-up area 519 m², land area 800 m²); Bayline Villa (Built-up area 344 m², land area 841 m²); Beachfront Villa (Built-up area 344 m², land area 942 m²).
 
-**When is PX Compound delivered?** Delivery starts in 2028, according to the developer.
+**When is Hacienda Ras El Hekma delivered?** Delivery is expected in 2030, according to the developer.
 
-**Are Palm Gardens homes finished?** Town houses in Palm Gardens are fully finished; villas are delivered Core & Shell.
+**Are Hacienda Ras El Hekma homes finished?** Yes, all the units shown are delivered fully finished.
 
-**Is VIBE Real Estate the developer of PX Compound?** No. The developer is Palm Hills Developments. VIBE Real Estate is an independent broker that presents the project and helps you choose a unit; contracts are signed directly with the developer.
+**Is palmhillsdev.com the official Hacienda Ras El Hekma website?** No. The developer is Palm Hills Developments. palmhillsdev.com is a marketing platform owned by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. Contracts are signed directly with the company.
 
 **Are the prices shown final?** Prices are indicative and may be changed by the developer without notice. The developer is the final reference at the time of contracting.
 
-## Palm Parks
+## Badya Palm Hills
 
-Page: https://palmhillsdev.com/en/palm-parks (Arabic: https://palmhillsdev.com/palm-parks)
+Page: https://palmhillsdev.com/en/badya (Arabic: https://palmhillsdev.com/badya)
 
-Palm Parks is a Palm Hills Developments community in West Cairo, right off the Dahshur Link, designed as a quiet low-density neighbourhood with open space between buildings. The project is all apartments with practical layouts, with a clubhouse, swimming pools and a commercial area inside. Only a limited number of units is currently available.
+Badya is an integrated city by Palm Hills Developments in 6th of October on Al Wahat Road, divided into 6 districts, each with its own plan and services, connected through a central hub called The Core. The city is built around a smart, green concept, with Badya International University, schools, sports clubs and walking and cycling trails. Units available now are in Districts 2 and 6: fully finished one- to three-bedroom apartments, plus core & shell town houses and villas.
 
 | Unit | Size | Price from (EGP) |
 |---|---|---|
-| 3 Bedroom Apartment | 169 – 170 m² | 17,807,000 |
-| 2 Bedroom Apartment with Garden | 132 m² | 18,202,000 |
-| 3 Bedroom Apartment with Garden | 170 m² | 21,719,000 |
+| 1 Bedroom Apartment | 58 – 70 m² | 6,892,600 |
+| 2 Bedroom Apartment | 93 – 135 m² | 9,227,300 |
+| 3 Bedroom Apartment | 125 – 168 m² | 11,169,500 |
+| Town House Middle | Built-up area 190.5 m², land area 189.5 m² | 21,625,000 |
+| Town House Corner | Built-up area 194 m², land area 230 m² | 24,063,000 |
+| Villa N2 | Built-up area 180 m², land area 255 m² | 25,318,000 |
+| Villa Z2 | Built-up area 275.5 m², land area 401 m² | 33,486,000 |
+| Villa X2 | Built-up area 364 m², land area 550 m² | 42,424,000 |
+| Villa W2 | Built-up area 466 m², land area 750 m² | 56,767,000 |
 
-**Where is Palm Parks located?** Palm Parks sits right off the Dahshur Link in West Cairo, close to Media Production City and October's main shopping destinations. It is developed by Palm Hills Developments.
+**Where is Badya Palm Hills located?** Badya is in 6th of October, Giza, on Al Wahat Road, close to the 26th of July Corridor and Zewail Road, and to West Cairo's main landmarks. It is developed by Palm Hills Developments.
 
-**What are the starting prices in Palm Parks?** Prices start from EGP 17,807,000. Available units: 3 Bedroom Apartment from EGP 17,807,000; 2 Bedroom Apartment with Garden from EGP 18,202,000; 3 Bedroom Apartment with Garden from EGP 21,719,000.
+**What are the starting prices in Badya Palm Hills?** Prices start from EGP 6,892,600. Available units: 1 Bedroom Apartment from EGP 6,892,600; 2 Bedroom Apartment from EGP 9,227,300; 3 Bedroom Apartment from EGP 11,169,500; Town House Middle from EGP 21,625,000; Town House Corner from EGP 24,063,000; Villa N2 from EGP 25,318,000; Villa Z2 from EGP 33,486,000; Villa X2 from EGP 42,424,000; Villa W2 from EGP 56,767,000.
 
-**What payment plans are available in Palm Parks?** 5% down payment with installments over up to 8 years.
+**What payment plans are available in Badya Palm Hills?** Option 1: 1.5% down payment, 1.5% after 1 month; installments over 12 years at the original price, or 10 years with 12% off, or 8 years with 22% off, or 6 years with 39% off. Option 2: 1.5% down payment, 1.5% after 1 month, 1.5% after 2 months, 1.5% after 3 months; installments over 12 years with 4% off, or 10 years with 14% off, or 8 years with 25% off, or 6 years with 43% off.
 
-**What unit types and sizes are available in Palm Parks?** 3 Bedroom Apartment (169 – 170 m²); 2 Bedroom Apartment with Garden (132 m²); 3 Bedroom Apartment with Garden (170 m²).
+**What unit types and sizes are available in Badya Palm Hills?** 1 Bedroom Apartment (58 – 70 m²); 2 Bedroom Apartment (93 – 135 m²); 3 Bedroom Apartment (125 – 168 m²); Town House Middle (Built-up area 190.5 m², land area 189.5 m²); Town House Corner (Built-up area 194 m², land area 230 m²); Villa N2 (Built-up area 180 m², land area 255 m²); Villa Z2 (Built-up area 275.5 m², land area 401 m²); Villa X2 (Built-up area 364 m², land area 550 m²); Villa W2 (Built-up area 466 m², land area 750 m²).
 
-**When is Palm Parks delivered?** Delivery is in 2029, according to the developer.
+**When is Badya Palm Hills delivered?** Delivery is expected in 2028 – 2031, according to the developer.
 
-**Is VIBE Real Estate the developer of Palm Parks?** No. The developer is Palm Hills Developments. VIBE Real Estate is an independent broker that presents the project and helps you choose a unit; contracts are signed directly with the developer.
+**Is palmhillsdev.com the official Badya Palm Hills website?** No. The developer is Palm Hills Developments. palmhillsdev.com is a marketing platform owned by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. Contracts are signed directly with the company.
 
 **Are the prices shown final?** Prices are indicative and may be changed by the developer without notice. The developer is the final reference at the time of contracting.
 
-## Crown Extension
+## 97 Hills
 
-Page: https://palmhillsdev.com/en/crown-extension (Arabic: https://palmhillsdev.com/crown-extension)
+Page: https://palmhillsdev.com/en/97-hills (Arabic: https://palmhillsdev.com/97-hills)
 
-Crown Extension is the extension of The Crown by Palm Hills Developments at the heart of Palm Hills October, close to the 26th of July Axis and the Cairo–Alexandria Desert Road. The phase offers spacious family homes — with a private garden or a penthouse — and a limited number of twin houses, in a low-density setting with wide green areas.
-
-| Unit | Size | Price from (EGP) |
-|---|---|---|
-| Family Home with Penthouse | 223 m² | 30,521,000 |
-| Family Home with Garden | 217 m² | 33,164,000 |
-| Twin House | Built-up area 226 m², land area 281 m² | 38,213,000 |
-
-**Where is Crown Extension located?** Crown Extension is at the heart of Palm Hills October, near the 26th of July Axis, the Cairo–Alexandria Desert Road and the Ring Road. It is developed by Palm Hills Developments.
-
-**What are the starting prices in Crown Extension?** Prices start from EGP 30,521,000. Available units: Family Home with Penthouse from EGP 30,521,000; Family Home with Garden from EGP 33,164,000; Twin House from EGP 38,213,000.
-
-**What payment plans are available in Crown Extension?** 5% down payment with installments over up to 8 years. A discount of up to 30% is available on the 5-year plan.
-
-**What unit types and sizes are available in Crown Extension?** Family Home with Penthouse (223 m²); Family Home with Garden (217 m²); Twin House (Built-up area 226 m², land area 281 m²).
-
-**When is Crown Extension delivered?** Delivery is in 2030, according to the developer.
-
-**Is VIBE Real Estate the developer of Crown Extension?** No. The developer is Palm Hills Developments. VIBE Real Estate is an independent broker that presents the project and helps you choose a unit; contracts are signed directly with the developer.
-
-**Are the prices shown final?** Prices are indicative and may be changed by the developer without notice. The developer is the final reference at the time of contracting.
-
-## Palm Hills One
-
-Page: https://palmhillsdev.com/en/palm-hills-one (Arabic: https://palmhillsdev.com/palm-hills-one)
-
-Palm Hills One is a villa community by Palm Hills Developments at The Hill in the heart of West Cairo, adjacent to Palm Hills October and minutes from the Cairo–Alexandria Desert Road. It is villas only: town houses, twin houses and standalone villas in six different models, on plots from 350 m² up to 1,500 m².
+97 Hills is a residential project by Palm Hills Developments in East Cairo, with family homes with a garden or penthouse, town houses, and standalone villas in several sizes. Family homes and town houses are delivered fully finished and villas core & shell, with delivery expected in 2030. The project includes a clubhouse, a pool, green spaces, walking and cycling trails and a commercial promenade.
 
 | Unit | Size | Price from (EGP) |
 |---|---|---|
-| Town House | Built-up area 358 m², land area 350 m² | 47,549,000 |
-| Twin House | Built-up area 340 – 358 m², land area 370 – 430 m² | 57,950,000 |
-| Standalone Villa | Built-up area 195 – 673 m², land area 451 – 1,500 m² | 86,087,000 |
+| Family Home with Penthouse | 193 m² | 28,684,000 |
+| Family Home with Garden | 183 m² | 29,571,000 |
+| Town House Middle | Built-up area 224 m², land area 260 m² | 34,936,000 |
+| Town House Corner | Built-up area 225.5 m², land area 264.5 m² | 38,535,000 |
+| Villa Type C | Built-up area 206 m², land area 287.5 m² | 40,894,000 |
+| Villa Type B | Built-up area 251.5 m², land area 384.5 m² | 52,604,000 |
+| Villa Type A | Built-up area 416.5 m², land area 566 m² | 67,845,000 |
 
-**Where is Palm Hills One located?** Palm Hills One is at The Hill in the heart of West Cairo, adjacent to Palm Hills October and close to all its services. It is developed by Palm Hills Developments.
+**Where is 97 Hills located?** 97 Hills is in East Cairo. It is developed by Palm Hills Developments.
 
-**What are the starting prices in Palm Hills One?** Prices start from EGP 47,549,000. Available units: Town House from EGP 47,549,000; Twin House from EGP 57,950,000; Standalone Villa from EGP 86,087,000.
+**What are the starting prices in 97 Hills?** Prices start from EGP 28,684,000. Available units: Family Home with Penthouse from EGP 28,684,000; Family Home with Garden from EGP 29,571,000; Town House Middle from EGP 34,936,000; Town House Corner from EGP 38,535,000; Villa Type C from EGP 40,894,000; Villa Type B from EGP 52,604,000; Villa Type A from EGP 67,845,000.
 
-**What payment plans are available in Palm Hills One?** 5% down payment with installments over up to 8 years.
+**What payment plans are available in 97 Hills?** Payment plan: 2.8% down payment, 2.8% after 2 months, 2.8% after 4 months; installments over 10 years at the original price, or 9 years with 15% off, or 8 years with 19% off, or 7 years with 24% off, or 6 years with 28% off, or 5 years with 32% off.
 
-**What unit types and sizes are available in Palm Hills One?** Town House (Built-up area 358 m², land area 350 m²); Twin House (Built-up area 340 – 358 m², land area 370 – 430 m²); Standalone Villa (Built-up area 195 – 673 m², land area 451 – 1,500 m²).
+**What unit types and sizes are available in 97 Hills?** Family Home with Penthouse (193 m²); Family Home with Garden (183 m²); Town House Middle (Built-up area 224 m², land area 260 m²); Town House Corner (Built-up area 225.5 m², land area 264.5 m²); Villa Type C (Built-up area 206 m², land area 287.5 m²); Villa Type B (Built-up area 251.5 m², land area 384.5 m²); Villa Type A (Built-up area 416.5 m², land area 566 m²).
 
-**When is Palm Hills One delivered?** Delivery is in 2030, according to the developer.
+**When is 97 Hills delivered?** Delivery is expected in 2030, according to the developer.
 
-**Is VIBE Real Estate the developer of Palm Hills One?** No. The developer is Palm Hills Developments. VIBE Real Estate is an independent broker that presents the project and helps you choose a unit; contracts are signed directly with the developer.
-
-**Are the prices shown final?** Prices are indicative and may be changed by the developer without notice. The developer is the final reference at the time of contracting.
-
-## Bamboo III
-
-Page: https://palmhillsdev.com/en/bamboo-iii (Arabic: https://palmhillsdev.com/bamboo-iii)
-
-Bamboo III is the third phase of Bamboo by Palm Hills Developments, inside Palm Hills October near Gezira Club and overlooking the 26th of July Axis. The project covers around 56 feddans with lagoons, water features and wide green areas. Homes are family homes with a garden or penthouse plus middle and corner town houses — all fully finished.
-
-| Unit | Size | Price from (EGP) |
-|---|---|---|
-| Family Home with Garden | 182 m² | 27,457,000 |
-| Family Home with Penthouse | 191 – 192 m² | 28,750,000 |
-| Town House Middle | Built-up area 221 m², land area 249 – 254 m² | 34,342,000 |
-| Town House Corner | Built-up area 222 m², land area 249 – 254 m² | 35,303,000 |
-
-**Where is Bamboo III located?** Bamboo III is on the 26th of July Axis in 6th of October, close to West Cairo's largest malls, universities and clubs. It is developed by Palm Hills Developments.
-
-**What are the starting prices in Bamboo III?** Prices start from EGP 27,457,000. Available units: Family Home with Garden from EGP 27,457,000; Family Home with Penthouse from EGP 28,750,000; Town House Middle from EGP 34,342,000; Town House Corner from EGP 35,303,000.
-
-**What payment plans are available in Bamboo III?** 5% down payment with installments over up to 10 years.
-
-**What unit types and sizes are available in Bamboo III?** Family Home with Garden (182 m²); Family Home with Penthouse (191 – 192 m²); Town House Middle (Built-up area 221 m², land area 249 – 254 m²); Town House Corner (Built-up area 222 m², land area 249 – 254 m²).
-
-**When is Bamboo III delivered?** Delivery is in 2029, according to the developer.
-
-**Are Bamboo III homes finished?** Yes, all the units shown are delivered fully finished.
-
-**Is VIBE Real Estate the developer of Bamboo III?** No. The developer is Palm Hills Developments. VIBE Real Estate is an independent broker that presents the project and helps you choose a unit; contracts are signed directly with the developer.
+**Is palmhillsdev.com the official 97 Hills website?** No. The developer is Palm Hills Developments. palmhillsdev.com is a marketing platform owned by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. Contracts are signed directly with the company.
 
 **Are the prices shown final?** Prices are indicative and may be changed by the developer without notice. The developer is the final reference at the time of contracting.

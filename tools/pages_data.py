@@ -177,7 +177,9 @@ MISC = {
 }
 
 
-# ---------------------------------------------------------------- Palm Hills October hub page
+# ---------------------------------------------------------------- grouped (hub) page
+# Off for now: the first three projects sit in different areas. Decide the grouping before turning it on.
+HUB_ON = False
 HUB_SLUG = "palm-hills-october"
 HUB = {
     "ar": {
