@@ -20,7 +20,7 @@ from pages_data import ABOUT, PRIVACY, PRIVACY_EMAIL, MISC  # noqa: E402
 
 LANGS = ("ar", "en")
 HOME_ON = True
-ASSET_V = "20261028d"
+ASSET_V = "20261028e"
 
 
 def ic(name):

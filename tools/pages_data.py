@@ -94,6 +94,7 @@ PRIVACY = {
             ]),
             ("ملفات تعريف الارتباط (Cookies)", [
                 ("ul", ["ملفات ضرورية لتشغيل الموقع", "ملفات تحليلية مثل Google Analytics لفهم كيفية استخدام الزوار للموقع", "ملفات إعلانية مثل Google Ads لقياس نتائج الإعلانات وعرض إعلانات مرتبطة بزيارتك (Remarketing)"]),
+                ("p", "عند إرسال النموذج، قد نرسل رقم هاتفك إلى Google بصيغة مشفّرة (Hashed) لقياس نتائج الإعلانات فقط (Enhanced Conversions)، ولا نرسل معه اسمك أو أي بيانات أخرى."),
                 ("html", 'يمكنك حذف ملفات تعريف الارتباط أو منعها من إعدادات متصفحك، وإيقاف الإعلانات المخصصة من <a href="https://adssettings.google.com" target="_blank" rel="noopener">إعدادات إعلانات Google</a>.'),
             ]),
             ("حماية البيانات ومدة الاحتفاظ بها", [
@@ -143,6 +144,7 @@ PRIVACY = {
             ]),
             ("Cookies", [
                 ("ul", ["Essential cookies needed for the website to work", "Analytics cookies such as Google Analytics, to understand how visitors use the website", "Advertising cookies such as Google Ads, to measure ad results and show ads related to your visit (remarketing)"]),
+                ("p", "When you submit the form, we may send your phone number to Google in hashed (encrypted) form, only to measure ad results (Enhanced Conversions), without your name or any other details."),
                 ("html", 'You can delete or block cookies in your browser settings, and turn off personalised ads in <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>.'),
             ]),
             ("Data protection and retention", [

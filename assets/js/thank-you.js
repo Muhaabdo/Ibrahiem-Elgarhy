@@ -53,7 +53,13 @@
   if (!lead) { $("#tyTitle").textContent = T.titleGeneric || ""; $("#tyText").textContent = T.textGeneric || ""; $("#tyPoints").hidden = true; bar.hidden = true; return; }
   if (lead.project && T.titleProject) $("#tyTitle").textContent = T.titleProject.replace("{p}", lead.project);
 
-  if (!lead.confirmed) { lead.confirmed = true; save(); push("thank_you_view"); }
+  if (!lead.confirmed) {
+    lead.confirmed = true;
+    /* Enhanced conversions: the phone goes to GTM as user_data right before the conversion event
+       (Google hashes it before sending), then it is dropped from the browser's session storage. */
+    if (lead.phone) { window.dataLayer.push({ user_data: { phone_number: lead.phone } }); delete lead.phone; }
+    save(); push("thank_you_view");
+  }
 
   /* Desktop: WhatsApp goes to a NEW tab so this page stays open. Browsers only allow a new tab
      that follows a click, so the automatic attempt is usually blocked — then the page simply
