@@ -1,0 +1,17 @@
+# Price sheets and other source data — kept locally only (never commit client price sheets).
+/data/
+*.xlsx
+
+# Raw image drops waiting to be processed into assets/img/projects/<slug>/
+*-src/
+
+# Old page captures and one-off build leftovers
+*viberealestatre.com*.html
+/build_tmp/
+
+# Python cache
+__pycache__/
+
+# OS junk
+Thumbs.db
+.DS_Store

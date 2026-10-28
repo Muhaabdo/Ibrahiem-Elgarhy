@@ -1,0 +1,35 @@
+RewriteEngine On
+
+# Build scripts, source data and future-project image sources are not part of the public site.
+RewriteRule ^(tools|data)/ - [F,L]
+RewriteRule ^assets/img/_future/ - [F,L]
+
+# Old pages (removed Oct 2026) -> closest new page
+RewriteRule ^palm-hills-projects(-west|-east)?(\.html)?/?$ /palm-hills-october [R=301,L]
+RewriteRule ^(hacienda-ras-al-hekma|north-coast-project)(\.html)?/?$ / [R=301,L]
+
+# If the request already resolves to a real file or directory, leave it alone
+# (assets, images, this file itself, etc.).
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /page.html -> /page (visible redirect, so old links and search engines land on one URL)
+RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# /page -> serve page.html (internal rewrite, URL bar keeps the clean form)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
+
+ErrorDocument 404 /404.html
+
+# Long cache for versioned static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

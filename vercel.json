@@ -1,0 +1,31 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/palm-hills-projects",
+      "destination": "/palm-hills-october",
+      "permanent": true
+    },
+    {
+      "source": "/palm-hills-projects-west",
+      "destination": "/palm-hills-october",
+      "permanent": true
+    },
+    {
+      "source": "/palm-hills-projects-east",
+      "destination": "/palm-hills-october",
+      "permanent": true
+    },
+    {
+      "source": "/hacienda-ras-al-hekma",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/north-coast-project",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
