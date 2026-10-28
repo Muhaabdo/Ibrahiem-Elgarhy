@@ -1,5 +1,5 @@
 /**
- * VIBE Real Estate — lead capture (Google Sheets + email notification).
+ * Palm Hills Dev (palmhillsdev.com) — lead capture (Google Sheets + email notification).
  *
  * Setup (once):
  *  1. Create a new Google Sheet, then Extensions → Apps Script, and paste this file.
@@ -8,7 +8,7 @@
  *  4. Copy the web-app URL into SITE["endpoint"] in tools/site_data.py and run tools/build.py.
  */
 var SHEET_NAME = 'Leads';
-var EMAIL_TO = 'M.a.fattah79@gmail.com';
+var EMAIL_TO = 'ibrahimelgarhy1987@gmail.com';
 var EMAIL_CC = 'Info@mohabdo.com';
 var STATUSES = ['New', 'Qualified', 'Potential', 'No answer', 'Not qualified', 'Meeting', 'Deal'];
 
@@ -77,7 +77,7 @@ function doPost(e) {
 }
 
 function notify_(d) {
-  var subject = 'New lead — ' + (d.project || 'VIBE') + (d.unit ? ' / ' + d.unit : '') + ' — ' + (d.name || '');
+  var subject = 'New lead — ' + (d.project || 'Palm Hills Dev') + (d.unit ? ' / ' + d.unit : '') + ' — ' + (d.name || '');
   var wa = 'https://wa.me/' + String(d.phone).replace(/\D/g, '');
   var lines = [
     'Name: ' + (d.name || ''),
@@ -99,4 +99,4 @@ function out_(o) {
   return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
 }
 
-function doGet() { return out_({ ok: true, service: 'vibe-leads' }); }
+function doGet() { return out_({ ok: true, service: 'palmhillsdev-leads' }); }

@@ -1,10 +1,10 @@
-/* VIBE Real Estate — project landing pages.
+/* Palm Hills Dev — landing pages.
    Lead flow: CTA -> form -> Google Sheet -> /thank-you -> WhatsApp.
    Every step pushes a dataLayer event so GTM/GA4 can build the funnel:
    cta_click -> form_open -> form_start -> (form_error) -> generate_lead -> thank_you_view -> whatsapp_redirect */
 (function () {
   "use strict";
-  var CFG = window.VIBE || {};
+  var CFG = window.SITE_CFG || {};
   var LANG = CFG.lang || "ar";
   var T = CFG.t || {};
   var $ = function (s, r) { return (r || document).querySelector(s); };
@@ -24,7 +24,7 @@
      Captured the first time they appear in the URL and kept for 90 days, so a visitor who
      browses to another project page (or comes back later) is still attributed. */
   var ATTR_KEYS = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
-  var ATTR_STORE = "vibe_attr", ATTR_TTL = 90 * 864e5;
+  var ATTR_STORE = "phd_attr", ATTR_TTL = 90 * 864e5;
   function readAttr() {
     try {
       var o = JSON.parse(localStorage.getItem(ATTR_STORE) || "{}");
@@ -63,9 +63,9 @@
   var ck = $("#ck");
   if (ck) {
     var seen = false;
-    try { seen = sessionStorage.getItem("vibe_ck") === "1"; } catch (e) {}
+    try { seen = sessionStorage.getItem("phd_ck") === "1"; } catch (e) {}
     if (!seen) {
-      var hideCk = function () { ck.classList.add("hide"); try { sessionStorage.setItem("vibe_ck", "1"); } catch (e) {} };
+      var hideCk = function () { ck.classList.add("hide"); try { sessionStorage.setItem("phd_ck", "1"); } catch (e) {} };
       setTimeout(function () { ck.classList.remove("hide"); }, 900);
       setTimeout(hideCk, 8900);
       $$("[data-ck-close]", ck).forEach(function (b) { b.addEventListener("click", hideCk); });
@@ -176,7 +176,7 @@
   /* ---------------- Countries + phone validation ---------------- */
   var COUNTRIES = [], PRIORITY = 0;
   (function parseCountries() {
-    var raw = (window.VIBE_COUNTRIES || "EG:20:10:10").split("|");
+    var raw = (window.SITE_COUNTRIES || "EG:20:10:10").split("|");
     var names; try { names = new Intl.DisplayNames([LANG], { type: "region" }); } catch (e) { names = null; }
     raw.forEach(function (chunk, ci) {
       var list = chunk.split(",").filter(Boolean).map(function (s) {
@@ -322,7 +322,7 @@
           try { waTab.location.href = "https://wa.me/" + CFG.wa + "?text=" + encodeURIComponent(msg); opened = true; } catch (err) {}
         }
         try {
-          sessionStorage.setItem("vibe_lead", JSON.stringify({
+          sessionStorage.setItem("phd_lead", JSON.stringify({
             project: project, unit: unit, lang: LANG, cta: loc,
             back: location.pathname + location.search, backTitle: CFG.backTitle || project, ts: Date.now(),
             redirected: opened, newTab: opened
@@ -331,7 +331,7 @@
         if (opened) track("whatsapp_redirect", { method: "new_tab", unit_type: unit, project: project, form_location: loc });
         location.href = CFG.thankYou || "/thank-you";
       }
-      if (!CFG.endpoint) { console.warn("[VIBE] No leads endpoint configured — lead not stored:", lead); return done(); }
+      if (!CFG.endpoint) { console.warn("[site] No leads endpoint configured — lead not stored:", lead); return done(); }
       var finished = false, finish = function () { if (!finished) { finished = true; done(); } };
       setTimeout(finish, 4000);
       try {

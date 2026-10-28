@@ -1,7 +1,7 @@
 /* Country dial codes + national-number length (digits after the country code, without the
    leading trunk zero). Format: ISO2:dial[:min[:max]]. Countries without an explicit length
    fall back to a generic 6–12 digit check. Names come from Intl.DisplayNames at runtime. */
-window.VIBE_COUNTRIES =
+window.SITE_COUNTRIES =
   /* priority markets first — shown at the top of the list */
   "EG:20:10:10,SA:966:9:9,AE:971:8:9,KW:965:8:8,QA:974:8:8,BH:973:8:8,OM:968:8:8,JO:962:8:9,LB:961:7:8," +
   "LY:218:9:10,SD:249:9:9,IQ:964:10:10,GB:44:9:10,US:1:10:10,CA:1:10:10,DE:49:6:13,FR:33:9:9,|" +

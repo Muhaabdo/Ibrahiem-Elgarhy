@@ -10,8 +10,8 @@
    "path": "accounts/0/containers/0",
    "accountId": "0",
    "containerId": "0",
-   "name": "VIBE lead funnel (import)",
-   "publicId": "GTM-PVRH422L",
+   "name": "Lead funnel (import)",
+   "publicId": "GTM-W2CLZ5ZX",
    "usageContext": [
     "WEB"
    ],
@@ -34,7 +34,7 @@
     "supportTransformations": false
    },
    "tagIds": [
-    "GTM-PVRH422L"
+    "GTM-W2CLZ5ZX"
    ]
   },
   "tag": [
@@ -1676,7 +1676,7 @@
       "value": "G-XXXXXXXXXX"
      }
     ],
-    "notes": "Replace with the GA4 Measurement ID of the VIBE property."
+    "notes": "Replace with the GA4 Measurement ID of the Palm Hills Dev property."
    }
   ],
   "folder": [
@@ -1684,7 +1684,7 @@
     "accountId": "0",
     "containerId": "0",
     "folderId": "900",
-    "name": "VIBE lead funnel"
+    "name": "Lead funnel"
    }
   ],
   "builtInVariable": [

@@ -5,8 +5,7 @@
 # Raw image drops waiting to be processed into assets/img/projects/<slug>/
 *-src/
 
-# Old page captures and one-off build leftovers
-*viberealestatre.com*.html
+# One-off build leftovers
 /build_tmp/
 
 # Python cache

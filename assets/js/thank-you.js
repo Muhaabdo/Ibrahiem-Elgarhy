@@ -5,14 +5,14 @@
      conversion tag time to fire. The visible button is the fallback (some iPhones need a tap). */
 (function () {
   "use strict";
-  var CFG = window.VIBE || {}, T = CFG.t || {};
+  var CFG = window.SITE_CFG || {}, T = CFG.t || {};
   var REDIRECT_MS = 1800;
   var $ = function (s) { return document.querySelector(s); };
   window.dataLayer = window.dataLayer || [];
 
   var lead = null;
-  try { lead = JSON.parse(sessionStorage.getItem("vibe_lead") || "null"); } catch (e) {}
-  function save() { try { sessionStorage.setItem("vibe_lead", JSON.stringify(lead)); } catch (e) {} }
+  try { lead = JSON.parse(sessionStorage.getItem("phd_lead") || "null"); } catch (e) {}
+  function save() { try { sessionStorage.setItem("phd_lead", JSON.stringify(lead)); } catch (e) {} }
 
   var label = lead ? (lead.project + (lead.unit ? " · " + lead.unit : "")) : "";
   var msg = lead && lead.project ? (T.waMsg || "").replace("{p}", lead.project).replace("{u}", lead.unit ? " (" + lead.unit + ")" : "") : (T.waMsgGeneric || "");
