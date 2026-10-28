@@ -4,7 +4,7 @@
 ABOUT = {
     "ar": {
         "seo_title": "من نحن – palmhillsdev | إبراهيم الجارحي",
-        "seo_desc": "palmhillsdev منصة تسويقية لمشاريع بالم هيلز يملكها ويديرها إبراهيم الجارحي، نائب مدير مبيعات في بالم هيلز. أسعار وخطط سداد محدّثة وتواصل مباشر.",
+        "seo_desc": "palmhillsdev منصة تسويقية لمشاريع بالم هيلز يملكها ويديرها إبراهيم الجارحي، مدير مبيعات في بالم هيلز. أسعار وخطط سداد محدّثة وتواصل مباشر.",
         "eyebrow": "من نحن",
         "h1": "تواصل مباشر مع فريق مبيعات بالم هيلز",
         "sub": "palmhillsdev.com منصة تسويقية يملكها ويديرها إبراهيم الجارحي — وليست الموقع الرسمي لشركة بالم هيلز.",
@@ -12,7 +12,7 @@ ABOUT = {
         "address": "بادية، بالم هيلز أكتوبر، السادس من أكتوبر، الجيزة",
         "lbl": {"tel": "موبايل وواتساب", "mail": "البريد الإلكتروني", "addr": "مقر العمل"},
         "intro": [
-            "إبراهيم الجارحي نائب مدير مبيعات في بالم هيلز للتطوير العقاري (Palm Hills Developments)، ومسؤول عن متابعة العملاء المهتمين بمشاريع الشركة في غرب القاهرة وشرقها والساحل الشمالي.",
+            "إبراهيم الجارحي مدير مبيعات في بالم هيلز للتطوير العقاري (Palm Hills Developments)، ومسؤول عن متابعة العملاء المهتمين بمشاريع الشركة في غرب القاهرة وشرقها والساحل الشمالي.",
             "عمل المنصة دي عشان يكون فيه مكان واحد واضح تعرف منه الوحدات المتاحة حاليًا وأسعارها وخطط سدادها، من غير ما تلف على مواقع كتير بأرقام قديمة أو متضاربة. ولما تحدد اللي يناسبك، بيتابع معاك بنفسه لحد المعاينة والتعاقد مع الشركة.",
         ],
         "values_eyebrow": "ليه تتعامل معانا", "values_h": "اللي هتلاقيه لما تتواصل معانا",
@@ -35,7 +35,7 @@ ABOUT = {
     },
     "en": {
         "seo_title": "About Us – palmhillsdev | Ibrahim El Garhy",
-        "seo_desc": "palmhillsdev is a marketing platform for Palm Hills projects, owned and run by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. Up-to-date prices, payment plans and direct contact.",
+        "seo_desc": "palmhillsdev is a marketing platform for Palm Hills projects, owned and run by Ibrahim El Garhy, Sales Manager at Palm Hills. Up-to-date prices, payment plans and direct contact.",
         "eyebrow": "About us",
         "h1": "Talk directly to the Palm Hills sales team",
         "sub": "palmhillsdev.com is a marketing platform owned and run by Ibrahim El Garhy — it is not the official Palm Hills website.",
@@ -43,7 +43,7 @@ ABOUT = {
         "address": "Badya, Palm Hills October, 6th of October, Giza",
         "lbl": {"tel": "Mobile & WhatsApp", "mail": "Email", "addr": "Office"},
         "intro": [
-            "Ibrahim El Garhy is Sales Deputy Manager at Palm Hills Developments, following up with clients interested in the company's projects in West Cairo, East Cairo and the North Coast.",
+            "Ibrahim El Garhy is Sales Manager at Palm Hills Developments, following up with clients interested in the company's projects in West Cairo, East Cairo and the North Coast.",
             "He built this platform so there is one clear place to see the units available now, their prices and payment plans — without going through many websites with outdated or conflicting numbers. Once you find what fits, he follows up with you personally through the site visit and the contract with the company.",
         ],
         "values_eyebrow": "Why talk to us", "values_h": "What you get when you contact us",
@@ -75,7 +75,7 @@ PRIVACY = {
         "intro": "توضح هذه السياسة كيف تتعامل منصة palmhillsdev (palmhillsdev.com) مع بياناتك الشخصية عند استخدامك للموقع أو تواصلك معنا. باستخدامك للموقع فأنت توافق على ما ورد في هذه السياسة.",
         "sections": [
             ("من نحن", [
-                ("p", "palmhillsdev.com منصة تسويقية وإعلامية يملكها ويديرها إبراهيم الجارحي، نائب مدير مبيعات في بالم هيلز للتطوير العقاري. هذا الموقع ليس الموقع الرسمي لشركة بالم هيلز، وهو المسؤول عن البيانات التي تُجمع من خلاله."),
+                ("p", "palmhillsdev.com منصة تسويقية وإعلامية يملكها ويديرها إبراهيم الجارحي، مدير مبيعات في بالم هيلز للتطوير العقاري. هذا الموقع ليس الموقع الرسمي لشركة بالم هيلز، وهو المسؤول عن البيانات التي تُجمع من خلاله."),
                 ("p", "جميع الأسعار والصور وخطط السداد والمواصفات المعروضة للاسترشاد فقط، وقابلة للتغيير دون إشعار مسبق، ولا تمثل عرضًا تعاقديًا ملزمًا."),
             ]),
             ("البيانات التي نجمعها", [
@@ -125,7 +125,7 @@ PRIVACY = {
         "intro": "This policy explains how palmhillsdev (palmhillsdev.com) handles your personal data when you use the website or contact us. By using the website you agree to this policy.",
         "sections": [
             ("Who we are", [
-                ("p", "palmhillsdev.com is a marketing and information platform owned and run by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills Developments. It is not the official Palm Hills website, and it is responsible for the data collected through it."),
+                ("p", "palmhillsdev.com is a marketing and information platform owned and run by Ibrahim El Garhy, Sales Manager at Palm Hills Developments. It is not the official Palm Hills website, and it is responsible for the data collected through it."),
                 ("p", "All prices, images, payment plans and specifications are indicative, may change without notice, and are not a binding contractual offer."),
             ]),
             ("Data we collect", [

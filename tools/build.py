@@ -371,9 +371,9 @@ def project_faq(p, lang, t):
                   (f"Are {launch['name']} homes finished?",
                    f"Town houses in {launch['name']} are fully finished; villas are delivered Core & Shell."))
     qa.append((f"هل palmhillsdev.com هو الموقع الرسمي لـ {name}؟",
-               f"لا. المطوّر هو Palm Hills Developments، وpalmhillsdev.com منصة تسويقية يملكها إبراهيم الجارحي، نائب مدير مبيعات في بالم هيلز. التعاقد بيتم مع الشركة مباشرة.") if ar else
+               f"لا. المطوّر هو Palm Hills Developments، وpalmhillsdev.com منصة تسويقية يملكها إبراهيم الجارحي، مدير مبيعات في بالم هيلز. التعاقد بيتم مع الشركة مباشرة.") if ar else
               (f"Is palmhillsdev.com the official {name} website?",
-               "No. The developer is Palm Hills Developments. palmhillsdev.com is a marketing platform owned by Ibrahim El Garhy, Sales Deputy Manager at Palm Hills. Contracts are signed directly with the company."))
+               "No. The developer is Palm Hills Developments. palmhillsdev.com is a marketing platform owned by Ibrahim El Garhy, Sales Manager at Palm Hills. Contracts are signed directly with the company."))
     qa.append(("هل الأسعار المعروضة نهائية؟",
                "الأسعار استرشادية وقابلة للتغيير من المطوّر دون إشعار مسبق، والمرجع النهائي هو المطوّر وقت التعاقد.") if ar else
               ("Are the prices shown final?",

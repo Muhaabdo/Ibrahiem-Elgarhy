@@ -1,6 +1,6 @@
 # palmhillsdev — palmhillsdev.com
 
-Marketing site for Palm Hills projects, owned and run by Ibrahim El Garhy (Sales Deputy Manager at Palm Hills).
+Marketing site for Palm Hills projects, owned and run by Ibrahim El Garhy (Sales Manager at Palm Hills).
 Not the official Palm Hills website — that is said on the home, About, footer and every project FAQ.
 
 Static site. Every HTML page is generated from two data files, so prices and text are edited in one place.
