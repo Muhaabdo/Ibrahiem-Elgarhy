@@ -146,6 +146,17 @@ def logo(lang):
             f'<strong>palmhills<span>dev</span></strong><small>by {esc(SITE["owner"]["en"])}</small></a>')
 
 
+def org_ld(**extra):
+    """The one business entity (schema.org RealEstateAgent) shared by every page's JSON-LD."""
+    d = {"@type": "RealEstateAgent", "@id": SITE["domain"] + "/#organization", "name": SITE["brand"],
+         "url": SITE["domain"] + "/", "logo": SITE["domain"] + "/assets/img/brand/logo-512.png",
+         "telephone": SITE["tel_intl"], "email": SITE["email"], "priceRange": "EGP 6,000,000+",
+         "areaServed": [{"@type": "Country", "name": "Egypt"}],
+         "address": {"@type": "PostalAddress", "addressLocality": "6th of October", "addressRegion": "Giza", "addressCountry": "EG"}}
+    d.update(extra)
+    return d
+
+
 def wa_prices():
     """Starting prices per project and unit, read by the lead form to put the price in the WhatsApp message."""
     return {p["name"]: {"from": money(p["price_from"]), "down": f'{p["down"]:g}',
@@ -358,9 +369,7 @@ def jsonld(slug, p, lang, t):
     org = SITE["domain"] + "/#organization"
     hero = SITE["domain"] + img(p["img"], p["hero"]) if p.get("hero") else SITE["domain"] + img("px", "lagoon")
     graph = [
-        {"@type": "RealEstateAgent", "@id": org, "name": SITE["brand"], "url": SITE["domain"] + "/",
-         "telephone": SITE["tel_intl"], "email": SITE["email"], "image": hero,
-         "address": {"@type": "PostalAddress", "addressLocality": "6th of October", "addressRegion": "Giza", "addressCountry": "EG"}},
+        org_ld(image=hero),
         {"@type": "WebPage", "@id": page + "#webpage", "url": page, "name": p["seo"][lang]["title"],
          "description": p["seo"][lang]["desc"], "inLanguage": lang,
          "primaryImageOfPage": hero,
@@ -740,9 +749,7 @@ def home_page(lang):
     items = [{"@type": "ListItem", "position": i + 1, "name": o["title"], "url": url(s_, lang, True)} for i, (s_, o) in enumerate(ps)]
     org = SITE["domain"] + "/#organization"
     ld = json.dumps({"@context": "https://schema.org", "@graph": [
-        {"@type": "RealEstateAgent", "@id": org, "name": SITE["brand"], "url": SITE["domain"] + "/", "telephone": SITE["tel_intl"],
-         "email": SITE["email"], **({"image": SITE["domain"] + hero_img} if hero_img else {}),
-         "address": {"@type": "PostalAddress", "addressLocality": "6th of October", "addressRegion": "Giza", "addressCountry": "EG"}},
+        org_ld(**({"image": SITE["domain"] + hero_img} if hero_img else {})),
         {"@type": "WebSite", "@id": SITE["domain"] + "/#website", "url": SITE["domain"] + "/", "name": SITE["brand"], "inLanguage": ["ar", "en"], "publisher": {"@id": org}},
         {"@type": "ItemList", "name": t["home_proj_h"], "itemListElement": items}, faq_ld]}, ensure_ascii=False, indent=1)
     html = head(t["home_seo_title"], t["home_seo_desc"], url("", lang, True), alternates, lang, t, preload=hero_img, ld=ld)
@@ -961,9 +968,7 @@ def about_page(lang):
     org = SITE["domain"] + "/#organization"
     person = SITE["domain"] + "/#owner"
     ld = json.dumps({"@context": "https://schema.org", "@graph": [
-        {"@type": "RealEstateAgent", "@id": org, "name": SITE["brand"], "url": SITE["domain"] + "/", "telephone": SITE["tel_intl"],
-         "email": SITE["email"], "description": a["seo_desc"], "founder": {"@id": person},
-         "address": {"@type": "PostalAddress", "addressLocality": "6th of October", "addressRegion": "Giza", "addressCountry": "EG"}},
+        org_ld(description=a["seo_desc"], founder={"@id": person}),
         {"@type": "Person", "@id": person, "name": SITE["owner"][lang], "jobTitle": SITE["owner_role"][lang],
          "worksFor": {"@type": "Organization", "name": "Palm Hills Developments"}, "telephone": SITE["tel_intl"], "email": SITE["email"]},
         {"@type": "AboutPage", "url": url("about-us", lang, True), "name": a["seo_title"], "inLanguage": lang, "about": {"@id": org}}]},
