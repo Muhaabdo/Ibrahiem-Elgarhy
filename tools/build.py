@@ -21,6 +21,8 @@ from pages_data import ABOUT, PRIVACY, PRIVACY_EMAIL, MISC  # noqa: E402
 LANGS = ("ar", "en")
 HOME_ON = True
 ASSET_V = "20261028f"
+# The stylesheet is inlined: most visitors land on one page from an ad, so one less render-blocking request beats caching.
+CSS_INLINE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "css", "project.css"), encoding="utf-8").read().strip()
 
 
 def ic(name):
@@ -449,7 +451,7 @@ def head(title, desc, canonical, alternates, lang, t, og_img=None, robots="max-i
 {og}<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/img/brand/favicon.svg" type="image/svg+xml">
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/almarai-700-{"ar" if lang == "ar" else "latin"}.woff2">
-{pre}<link rel="stylesheet" href="/assets/css/project.css?v={ASSET_V}">
+{pre}<style>{CSS_INLINE}</style>
 {ldtag}</head>
 <body>
 {gtm_body()}
