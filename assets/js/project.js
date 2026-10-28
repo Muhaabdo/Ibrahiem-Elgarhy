@@ -302,6 +302,7 @@
       var a = readAttr();
       var project = CFG.project || "";
       if (CFG.pickProject) { project = unit === "Not sure" ? "" : unit; unit = ""; }   /* home page: the select chooses the project */
+      else if (unit === "Not sure") unit = "";                                           /* project page: "not sure yet" = general enquiry */
       var lead = {
         name: name, phone: ph.e164, country: ph.country.iso, project: project, unit: unit,
         page: location.origin + location.pathname, lang: LANG, cta: loc,
@@ -349,9 +350,12 @@
       } catch (err) { finish(); }
     });
 
+    /* unit given (unit card) -> field hidden, message names the unit.
+       No unit on a project page (hero, nav, sticky bar, offer) -> field hidden too: a general enquiry about the project.
+       Home page: the select picks the project, so it always stays visible. */
     form._setUnit = function (unit) {
       form._unit = unit || "";
-      if (unitEl) { fieldBox(unitEl).style.display = unit ? "none" : ""; if (!unit) unitEl.value = ""; }
+      if (unitEl) { fieldBox(unitEl).style.display = (unit || !CFG.pickProject) ? "none" : ""; unitEl.value = ""; }
     };
     form._reset = function () { form._started = false; $$(".bad", form).forEach(function (b) { b.classList.remove("bad"); }); };
   }
