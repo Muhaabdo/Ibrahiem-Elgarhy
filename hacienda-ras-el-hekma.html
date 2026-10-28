@@ -54,7 +54,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Brand: crimson + black + white (from the client's previous pages).
      Token names kept from the reference build: --em = dark surface, --gold = brand accent. */
   --em:#141414; --em-deep:#0A0A0A; --gold:#D31148; --gold-dk:#A80E3A; --gold-soft:#FF6F96;
-  --ivory:#F5F5F5; --ink:#1A1A1A; --muted:#686868; --white:#fff; --wa:#25D366;
+  --ivory:#F5F5F5; --ink:#1A1A1A; --muted:#686868; --white:#fff; --wa:#25D366; --wa-btn:#0F7B3F;
   --line:rgba(17,17,17,.10); --radius:18px;
   --shadow:0 8px 26px rgba(17,17,17,.07); --shadow-lg:0 18px 45px rgba(17,17,17,.13);
   --head:"Almarai",system-ui,sans-serif; --body:"Almarai",system-ui,sans-serif;
@@ -255,7 +255,7 @@ ul{list-style:none}
 .price{display:flex;align-items:baseline;gap:7px;flex-wrap:wrap;margin-top:auto;margin-bottom:14px}
 .price span{font-size:12px;color:var(--muted)}
 .price b{font-family:var(--head);font-size:21px;font-weight:700;color:var(--gold);direction:ltr;unicode-bidi:isolate}
-.disclaimer{max-width:1160px;margin:26px auto 0;display:flex;gap:10px;align-items:flex-start;font-size:11.5px;line-height:1.9;color:rgba(26,26,26,.6)}
+.disclaimer{max-width:1160px;margin:26px auto 0;display:flex;gap:10px;align-items:flex-start;font-size:11.5px;line-height:1.9;color:#5C5C5C}
 .disclaimer .ic{color:var(--gold);margin-top:5px}
 .cards-3{grid-template-columns:repeat(3,1fr)}
 .cards-2{grid-template-columns:repeat(2,1fr);max-width:820px;margin-inline:auto}
@@ -314,10 +314,11 @@ ul{list-style:none}
 .car-btn:hover{background:var(--gold);color:#fff}
 .car-btn[disabled]{opacity:.35;cursor:default}
 .car-btn.prev{inset-inline-start:-10px}.car-btn.next{inset-inline-end:-10px}
-.car-dots{display:flex;justify-content:center;gap:7px;margin-top:10px}
-.car-dots button{width:8px;height:8px;border-radius:50%;border:0;background:rgba(17,17,17,.22);padding:0;cursor:pointer;transition:all .25s}
-.car-dots button.on{width:24px;border-radius:5px;background:var(--gold)}
-.sec-dark .car-dots button{background:rgba(255,255,255,.25)}
+.car-dots{display:flex;justify-content:center;gap:0;margin-top:4px}
+.car-dots button{min-width:24px;height:24px;border:0;background:none;padding:0 4px;cursor:pointer;display:grid;place-items:center}
+.car-dots button::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(17,17,17,.22);transition:all .25s}
+.car-dots button.on::before{width:24px;border-radius:5px;background:var(--gold)}
+.sec-dark .car-dots button::before{background:rgba(255,255,255,.25)}
 @media (max-width:640px){.car-btn{display:none}}
 
 .gal .car-track>figure{margin:0;flex:0 0 min(62%,720px);aspect-ratio:16/10;border-radius:var(--radius);overflow:hidden;position:relative;background:var(--em);cursor:zoom-in}
@@ -353,9 +354,9 @@ ul{list-style:none}
 .lf-err{color:#c0392b;font-size:12px;margin-top:4px;min-height:0;display:none}
 .lf .bad .lf-err{display:block}
 .lf-hp{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;border:0!important;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);opacity:0;pointer-events:none}
-.lf-submit{background:var(--wa);color:#fff;font-size:16px;height:52px;border-radius:12px;width:100%;margin-top:4px}
+.lf-submit{background:var(--wa-btn);color:#fff;font-size:16px;height:52px;border-radius:12px;width:100%;margin-top:4px}
 .lf-submit .ic{font-size:21px}
-.lf-submit:hover{background:#1eb857}
+.lf-submit:hover{background:#0B6633}
 .lf-submit[disabled]{opacity:.7;cursor:wait}
 .lf-priv{font-size:11.5px;color:var(--muted);text-align:center;line-height:1.7}
 .lf-priv a{color:var(--em);text-decoration:underline}
@@ -466,9 +467,9 @@ ul{list-style:none}
 .ty-points li{display:flex;gap:9px;align-items:center;font-size:14px;color:var(--ink)}
 .ty-points .ic{color:#1eb857;font-size:13px}
 .ty-ctx{display:inline-block;margin-top:12px;background:var(--ivory);border:1px solid rgba(211,17,72,.45);color:var(--em);font-weight:800;font-size:13px;padding:4px 14px;border-radius:100px;unicode-bidi:plaintext}
-.ty-wa{background:var(--wa);color:#fff;font-size:16px;height:54px;border-radius:14px;width:100%;margin-top:20px}
+.ty-wa{background:var(--wa-btn);color:#fff;font-size:16px;height:54px;border-radius:14px;width:100%;margin-top:20px}
 .ty-wa .ic{font-size:22px}
-.ty-wa:hover{background:#1eb857}
+.ty-wa:hover{background:#0B6633}
 .ty-wa.pulse{animation:tyPulse 1.4s ease-in-out infinite}
 @keyframes tyPulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}60%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}
 .ty-count{font-size:12.5px;color:var(--muted);margin-top:10px;min-height:22px}
