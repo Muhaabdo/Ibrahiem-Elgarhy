@@ -6,14 +6,18 @@ any discount). Update the numbers here and run:  python3 tools/build.py
 """
 
 SITE = {
-    "domain": "https://viberealestatre.com",
-    "brand": "VIBE Real Estate",
-    "gtm": "GTM-PVRH422L",
-    "wa": "201006140168",
-    "tel": "01006140168",
-    "tel_intl": "+201006140168",
+    "domain": "https://palmhillsdev.com",
+    "brand": "Palm Hills Dev",
+    "owner": {"ar": "إبراهيم الجارحي", "en": "Ibrahim El Garhy"},
+    "owner_role": {"ar": "نائب مدير مبيعات في بالم هيلز", "en": "Sales Deputy Manager at Palm Hills"},
+    "email": "ibrahimelgarhy1987@gmail.com",
+    # Client's GTM container — empty until it is created; no GTM snippet is output while empty.
+    "gtm": "",
+    "wa": "201031170002",
+    "tel": "01031170002",
+    "tel_intl": "+201031170002",
     # Google Apps Script web-app URL (tools/apps-script/Code.gs). Leads are NOT stored until this is set.
-    "endpoint": "https://script.google.com/macros/s/AKfycbwInW5VXMwhu4pDDX_oJOO_L-O0MKkAnASVbF1pScLzcDUB3bycCsYI8vBe2IG72IxJ/exec",
+    "endpoint": "",
 }
 
 # Order = order of the "other projects" carousel.
@@ -423,8 +427,8 @@ T = {
         "ck_text": 'بنستخدم ملفات تعريف الارتباط (Cookies) لتتبع الأداء وتحسين تجربتك على الموقع. للمزيد اطّلع على <a href="/privacy-policy">سياسة الخصوصية</a>.',
         "ck_short": 'بنستخدم Cookies لتحسين تجربتك. <a href="/privacy-policy">سياسة الخصوصية</a>',
         "ck_ok": "موافق، تمام", "ck_ok_short": "موافق", "ck_aria": "إشعار ملفات تعريف الارتباط",
-        "ft_tag": "Connecting You to Egypt's Finest Properties",
-        "ft_disc": "<strong>إخلاء مسؤولية:</strong> هذا الموقع عبارة عن منصة إعلامية وتسويقية مملوكة وتُدار بواسطة <strong>وسيط عقاري مستقل</strong>، ولسنا المطور الرسمي أو المالك لأي من المشاريع المعروضة. يهدف الموقع إلى عرض وتسويق الفرص السكنية والاستثمارية المتاحة من مطورين عقاريين مختلفين وذلك لأغراض تعريفية وتسويقية فقط. جميع الأسعار وخطط السداد والمواصفات المعروضة قابلة للتغيير من قِبل المطورين دون إشعار مسبق، والمرجع النهائي هو المطور الرسمي لكل مشروع. نلتزم بالشفافية الكاملة وبحماية خصوصية بيانات المستخدمين، ولا نشاركها إلا مع الجهة المعنية مباشرةً بطلبك كما هو موضح في سياسة الخصوصية.",
+        "ft_tag": "منصة تسويقية لمشاريع بالم هيلز — أسعار وخطط سداد محدّثة من داخل فريق المبيعات.",
+        "ft_disc": "<strong>إخلاء مسؤولية:</strong> palmhillsdev.com منصة تسويقية يملكها ويديرها <strong>إبراهيم الجارحي، نائب مدير مبيعات في بالم هيلز</strong>. هذا الموقع <strong>ليس الموقع الرسمي</strong> لشركة بالم هيلز للتطوير العقاري. الأسعار وخطط السداد والمواصفات المعروضة للاسترشاد فقط، وقابلة للتغيير حسب سياسة الشركة ومدى توافر الوحدات دون إشعار مسبق، ولا تمثل عرضًا ملزمًا للبيع. التعاقد النهائي يتم مباشرةً مع الشركة المطوّرة. جميع الصور والعلامات التجارية وأسماء المشروعات مملوكة لأصحابها وتُعرض بغرض التوضيح.",
         "ft_rights": "جميع الحقوق محفوظة", "ft_about": "About Us", "ft_priv": "سياسة الخصوصية",
         "crumb_home": "الرئيسية",
         "home_seo_title": "VIBE Real Estate | وسيط عقاري مستقل في مصر",
@@ -522,8 +526,8 @@ T = {
         "ck_text": 'We use cookies to measure performance and improve your experience. Read our <a href="/en/privacy-policy">Privacy Policy</a>.',
         "ck_short": 'We use cookies to improve your experience. <a href="/en/privacy-policy">Privacy Policy</a>',
         "ck_ok": "Okay, got it", "ck_ok_short": "OK", "ck_aria": "Cookie notice",
-        "ft_tag": "Connecting You to Egypt's Finest Properties",
-        "ft_disc": "<strong>Disclaimer:</strong> This website is a marketing and informational platform owned and operated by an <strong>independent real estate broker</strong>. We are not the official developer or owner of any project shown. The site presents residential and investment opportunities from different developers for informational and marketing purposes only. All prices, payment plans and specifications are subject to change by the developers without prior notice, and the official developer of each project is the final reference. We are committed to full transparency and to protecting users' data, and we share it only with the party directly involved in your request, as explained in our Privacy Policy.",
+        "ft_tag": "A marketing platform for Palm Hills projects — up-to-date prices and payment plans from inside the sales team.",
+        "ft_disc": "<strong>Disclaimer:</strong> palmhillsdev.com is a marketing platform owned and run by <strong>Ibrahim El Garhy, Sales Deputy Manager at Palm Hills</strong>. This is <strong>not the official website</strong> of Palm Hills Developments. Prices, payment plans and specifications are indicative, may change without notice according to the company’s policy and unit availability, and are not a binding offer. The final contract is signed directly with the developer. All images, trademarks and project names belong to their owners and are shown for illustration.",
         "ft_rights": "All rights reserved", "ft_about": "About Us", "ft_priv": "Privacy Policy",
         "crumb_home": "Home",
         "home_seo_title": "VIBE Real Estate | Independent Property Broker in Egypt",

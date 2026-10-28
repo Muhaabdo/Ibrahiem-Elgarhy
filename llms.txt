@@ -1,28 +1,28 @@
-# VIBE Real Estate
+# Palm Hills Dev
 
 > VIBE Real Estate is an independent real-estate broker in Egypt. It presents residential projects from Egypt's leading developers, helps buyers compare units, prices and payment plans, and connects them with the developer. VIBE is not a developer: contracts are signed directly with the developer.
 
 Prices are in Egyptian pounds (EGP), are indicative, and may be changed by the developer without notice.
-Contact: phone / WhatsApp +201006140168. The site is available in Arabic (https://viberealestatre.com/) and English (https://viberealestatre.com/en/).
+Contact: phone / WhatsApp +201031170002. The site is available in Arabic (https://palmhillsdev.com/) and English (https://palmhillsdev.com/en/).
 
 ## Projects (Palm Hills Developments, West Cairo)
 
-- [PX Compound](https://viberealestatre.com/en/px): PX is Palm Hills Developments' newest community in West Cairo, set on the highest point of Palm Hills October — which gives its homes open views across the whole area. From EGP 13,144,000, 5% down payment, up to 10 years installments, delivery 2028.
-- [Palm Parks](https://viberealestatre.com/en/palm-parks): Palm Parks is a Palm Hills Developments community in West Cairo, right off the Dahshur Link, designed as a quiet low-density neighbourhood with open space between buildings. From EGP 17,807,000, 5% down payment, up to 8 years installments, delivery 2029.
-- [Crown Extension](https://viberealestatre.com/en/crown-extension): Crown Extension is the extension of The Crown by Palm Hills Developments at the heart of Palm Hills October, close to the 26th of July Axis and the Cairo–Alexandria Desert Road. From EGP 30,521,000, 5% down payment, up to 8 years installments, delivery 2030.
-- [Palm Hills One](https://viberealestatre.com/en/palm-hills-one): Palm Hills One is a villa community by Palm Hills Developments at The Hill in the heart of West Cairo, adjacent to Palm Hills October and minutes from the Cairo–Alexandria Desert Road. From EGP 47,549,000, 5% down payment, up to 8 years installments, delivery 2030.
-- [Bamboo III](https://viberealestatre.com/en/bamboo-iii): Bamboo III is the third phase of Bamboo by Palm Hills Developments, inside Palm Hills October near Gezira Club and overlooking the 26th of July Axis. From EGP 27,457,000, 5% down payment, up to 10 years installments, delivery 2029.
+- [PX Compound](https://palmhillsdev.com/en/px): PX is Palm Hills Developments' newest community in West Cairo, set on the highest point of Palm Hills October — which gives its homes open views across the whole area. From EGP 13,144,000, 5% down payment, up to 10 years installments, delivery 2028.
+- [Palm Parks](https://palmhillsdev.com/en/palm-parks): Palm Parks is a Palm Hills Developments community in West Cairo, right off the Dahshur Link, designed as a quiet low-density neighbourhood with open space between buildings. From EGP 17,807,000, 5% down payment, up to 8 years installments, delivery 2029.
+- [Crown Extension](https://palmhillsdev.com/en/crown-extension): Crown Extension is the extension of The Crown by Palm Hills Developments at the heart of Palm Hills October, close to the 26th of July Axis and the Cairo–Alexandria Desert Road. From EGP 30,521,000, 5% down payment, up to 8 years installments, delivery 2030.
+- [Palm Hills One](https://palmhillsdev.com/en/palm-hills-one): Palm Hills One is a villa community by Palm Hills Developments at The Hill in the heart of West Cairo, adjacent to Palm Hills October and minutes from the Cairo–Alexandria Desert Road. From EGP 47,549,000, 5% down payment, up to 8 years installments, delivery 2030.
+- [Bamboo III](https://palmhillsdev.com/en/bamboo-iii): Bamboo III is the third phase of Bamboo by Palm Hills Developments, inside Palm Hills October near Gezira Club and overlooking the 26th of July Axis. From EGP 27,457,000, 5% down payment, up to 10 years installments, delivery 2029.
 
 ## Company
 
-- [About VIBE Real Estate](https://viberealestatre.com/en/about-us): who we are and how we work as an independent broker.
-- [Privacy policy](https://viberealestatre.com/en/privacy-policy): how enquiry data is collected and used.
-- [Palm Hills October projects](https://viberealestatre.com/en/palm-hills-october): all five projects, a side-by-side price comparison and a guide by home type.
-- [Home](https://viberealestatre.com/en/): who VIBE is, the projects and general questions.
+- [About VIBE Real Estate](https://palmhillsdev.com/en/about-us): who we are and how we work as an independent broker.
+- [Privacy policy](https://palmhillsdev.com/en/privacy-policy): how enquiry data is collected and used.
+- [Palm Hills October projects](https://palmhillsdev.com/en/palm-hills-october): all five projects, a side-by-side price comparison and a guide by home type.
+- [Home](https://palmhillsdev.com/en/): who VIBE is, the projects and general questions.
 
 ## PX Compound
 
-Page: https://viberealestatre.com/en/px (Arabic: https://viberealestatre.com/px)
+Page: https://palmhillsdev.com/en/px (Arabic: https://palmhillsdev.com/px)
 
 PX is Palm Hills Developments' newest community in West Cairo, set on the highest point of Palm Hills October — which gives its homes open views across the whole area. The project spans around 370 feddans with a master plan by Chapman Taylor, split into residential zones of apartments and town houses, with a clubhouse, a commercial hub and walking trails inside the compound.
 
@@ -57,7 +57,7 @@ PX is Palm Hills Developments' newest community in West Cairo, set on the highes
 
 ## Palm Parks
 
-Page: https://viberealestatre.com/en/palm-parks (Arabic: https://viberealestatre.com/palm-parks)
+Page: https://palmhillsdev.com/en/palm-parks (Arabic: https://palmhillsdev.com/palm-parks)
 
 Palm Parks is a Palm Hills Developments community in West Cairo, right off the Dahshur Link, designed as a quiet low-density neighbourhood with open space between buildings. The project is all apartments with practical layouts, with a clubhouse, swimming pools and a commercial area inside. Only a limited number of units is currently available.
 
@@ -83,7 +83,7 @@ Palm Parks is a Palm Hills Developments community in West Cairo, right off the D
 
 ## Crown Extension
 
-Page: https://viberealestatre.com/en/crown-extension (Arabic: https://viberealestatre.com/crown-extension)
+Page: https://palmhillsdev.com/en/crown-extension (Arabic: https://palmhillsdev.com/crown-extension)
 
 Crown Extension is the extension of The Crown by Palm Hills Developments at the heart of Palm Hills October, close to the 26th of July Axis and the Cairo–Alexandria Desert Road. The phase offers spacious family homes — with a private garden or a penthouse — and a limited number of twin houses, in a low-density setting with wide green areas.
 
@@ -109,7 +109,7 @@ Crown Extension is the extension of The Crown by Palm Hills Developments at the 
 
 ## Palm Hills One
 
-Page: https://viberealestatre.com/en/palm-hills-one (Arabic: https://viberealestatre.com/palm-hills-one)
+Page: https://palmhillsdev.com/en/palm-hills-one (Arabic: https://palmhillsdev.com/palm-hills-one)
 
 Palm Hills One is a villa community by Palm Hills Developments at The Hill in the heart of West Cairo, adjacent to Palm Hills October and minutes from the Cairo–Alexandria Desert Road. It is villas only: town houses, twin houses and standalone villas in six different models, on plots from 350 m² up to 1,500 m².
 
@@ -135,7 +135,7 @@ Palm Hills One is a villa community by Palm Hills Developments at The Hill in th
 
 ## Bamboo III
 
-Page: https://viberealestatre.com/en/bamboo-iii (Arabic: https://viberealestatre.com/bamboo-iii)
+Page: https://palmhillsdev.com/en/bamboo-iii (Arabic: https://palmhillsdev.com/bamboo-iii)
 
 Bamboo III is the third phase of Bamboo by Palm Hills Developments, inside Palm Hills October near Gezira Club and overlooking the 26th of July Axis. The project covers around 56 feddans with lagoons, water features and wide green areas. Homes are family homes with a garden or penthouse plus middle and corner town houses — all fully finished.
 

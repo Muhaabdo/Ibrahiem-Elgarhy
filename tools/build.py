@@ -19,7 +19,7 @@ from site_data import SITE, PROJECTS, T  # noqa: E402
 from pages_data import ABOUT, PRIVACY, PRIVACY_EMAIL, MISC, HUB, HUB_SLUG  # noqa: E402
 
 LANGS = ("ar", "en")
-ASSET_V = "20261011c"
+ASSET_V = "20261028a"
 
 
 def ic(name):
@@ -58,6 +58,8 @@ def build_sprite():
 
 
 def gtm_head():
+    if not SITE["gtm"]:
+        return ""
     return ("<!-- Google Tag Manager -->\n"
             "<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n"
             "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
@@ -68,6 +70,8 @@ def gtm_head():
 
 
 def gtm_body():
+    if not SITE["gtm"]:
+        return ""
     return ("<!-- Google Tag Manager (noscript) -->\n"
             f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={SITE["gtm"]}"\n'
             'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n'
@@ -130,19 +134,25 @@ def unit_card(p, u, lang, t, title, launch=None):
    </article>'''
 
 
+def logo(lang):
+    """Text wordmark. Deliberately no developer symbol: the site is not the official Palm Hills website."""
+    return (f'<a class="logo" href="{url("", lang)}" aria-label="{esc(SITE["brand"])}">'
+            f'<strong>Palm Hills <span>Dev</span></strong><small>by {esc(SITE["owner"]["en"])}</small></a>')
+
+
 def footer(lang, t):
     return f'''<footer class="ft">
  <div class="wrap">
   <div class="ft-top">
    <div>
-    <div class="ft-logo">VIBE <span>Real Estate</span></div>
-    <div class="ft-acr">Vision · Investment · Brokerage · Excellence</div>
+    <div class="ft-logo">Palm Hills <span>Dev</span></div>
+    <div class="ft-acr">by {esc(SITE["owner"]["en"])}</div>
     <p class="ft-tag">{esc(t["ft_tag"])}</p>
    </div>
    <div class="ft-disc">{ic("info")}<p>{t["ft_disc"]}</p></div>
   </div>
   <div class="ft-bot">
-   <div>© <span id="year">2026</span> VIBE Real Estate — {esc(t["ft_rights"])}</div>
+   <div>© <span id="year">2026</span> {esc(SITE["brand"])} — {esc(t["ft_rights"])}</div>
    <ul class="ft-links">
     <li><a href="{url(HUB_SLUG, lang)}">{esc(HUB[lang]["crumb"])}</a></li>
     <li><a href="{url("about-us", lang)}">{esc(t["ft_about"])}</a></li>
@@ -476,7 +486,7 @@ def project_page(slug, lang):
     html += f'''{lang_bar(slug, lang, t)}
 <header class="nav">
  <div class="wrap">
-  <a class="logo" href="{url("", lang)}" aria-label="VIBE Real Estate"><strong>VIBE <span>Real Estate</span></strong><small>Luxury Properties</small></a>
+  {logo(lang)}
   <nav class="nav-links" aria-label="{esc(t["menu"])}">{nav_links}</nav>
   <button class="btn btn-cta" type="button" data-cta="nav">{ic("whatsapp")} {esc(t["nav_cta"])}</button>
   {lang_toggle(slug, lang)}
@@ -664,7 +674,7 @@ def home_page(lang):
     html += f'''{lang_bar("", lang, t)}
 <header class="nav">
  <div class="wrap">
-  <a class="logo" href="{url("", lang)}" aria-label="VIBE Real Estate"><strong>VIBE <span>Real Estate</span></strong><small>Luxury Properties</small></a>
+  {logo(lang)}
   <nav class="nav-links" aria-label="{esc(t["menu"])}">{nav_links}</nav>
   <button class="btn btn-cta" type="button" data-cta="nav">{ic("whatsapp")} {esc(t["home_nav_cta"])}</button>
   {lang_toggle("", lang)}
@@ -862,7 +872,7 @@ def hub_page(lang):
     html += f'''{lang_bar(HUB_SLUG, lang, t)}
 <header class="nav">
  <div class="wrap">
-  <a class="logo" href="{url("", lang)}" aria-label="VIBE Real Estate"><strong>VIBE <span>Real Estate</span></strong><small>Luxury Properties</small></a>
+  {logo(lang)}
   <nav class="nav-links" aria-label="{esc(t["menu"])}">{nav_links}</nav>
   <button class="btn btn-cta" type="button" data-cta="nav">{ic("whatsapp")} {esc(h["nav_cta"])}</button>
   {lang_toggle(HUB_SLUG, lang)}
@@ -982,7 +992,7 @@ def simple_shell(lang, t, slug, title, desc, body, robots="max-image-preview:lar
     html += f'''{lang_bar(slug, lang, t) if alternates else ""}
 <header class="nav">
  <div class="wrap">
-  <a class="logo" href="{url("", lang)}" aria-label="VIBE Real Estate"><strong>VIBE <span>Real Estate</span></strong><small>Luxury Properties</small></a>
+  {logo(lang)}
   <nav class="nav-links" aria-label="{esc(t["menu"])}">{nav_links}</nav>
   <button class="btn btn-cta" type="button" data-cta="nav">{ic("whatsapp")} {esc(t["home_nav_cta"])}</button>
   {lang_toggle(slug, lang) if alternates else ""}
@@ -1034,34 +1044,50 @@ def about_page(lang):
     t, a = T[lang], ABOUT[lang]
     arrow = ic("arrow-l" if t["dir"] == "rtl" else "arrow-r")
     intro = "".join(f"<p>{esc(x)}</p>" for x in a["intro"])
-    letters = "".join(f'<div class="vibe"><b>{l}</b><h3>{esc(n)}</h3><p>{esc(d)}</p></div>' for l, n, d in a["letters"])
+    initials = "".join(w[0] for w in SITE["owner"]["en"].split()[::2])  # "Ibrahim El Garhy" -> "IG"
+    card = f'''<div class="who">
+   <div class="who-id">
+    <div class="who-av" aria-hidden="true">{initials}</div>
+    <div><div class="who-k">{esc(a["card_h"])}</div><h2>{esc(SITE["owner"][lang])}</h2><p>{esc(SITE["owner_role"][lang])}</p></div>
+   </div>
+   <ul class="who-list">
+    <li>{ic("whatsapp")}<div><span>{esc(a["lbl"]["tel"])}</span><a class="ltr" href="tel:{SITE["tel"]}" data-track="call_click" data-loc="about">{SITE["tel"]}</a></div></li>
+    <li>{ic("mail")}<div><span>{esc(a["lbl"]["mail"])}</span><a class="ltr" href="mailto:{SITE["email"]}">{SITE["email"]}</a></div></li>
+    <li>{ic("pin")}<div><span>{esc(a["lbl"]["addr"])}</span><b>{esc(a["address"])}</b></div></li>
+   </ul>
+   <button class="btn btn-cta btn-lg who-cta" type="button" data-cta="about">{ic("whatsapp")} {esc(t["home_nav_cta"])}</button>
+  </div>'''
     values = "".join(f'<div class="feat"><div class="feat-ic">{ic(i)}</div><div><h3>{esc(h)}</h3><p>{esc(d)}</p></div></div>' for i, h, d in a["values"])
+    steps = "".join(f'<li><b>{n}</b><h3>{esc(h)}</h3><p>{esc(d)}</p></li>' for n, (h, d) in enumerate(a["steps"], 1))
     body = f'''{page_hero(a["eyebrow"], a["h1"], a["sub"])}
 <section class="sec sec-white">
- <div class="wrap"><div class="prose prose-center">{intro}</div></div>
-</section>
-<section class="sec sec-dark">
- <div class="wrap">
-  <div class="sec-head"><div class="eyebrow">{esc(a["name_eyebrow"])}</div><h2>{esc(a["name_h"])}</h2><p>{esc(a["name_p"])}</p></div>
-  <div class="vibes">{letters}</div>
+ <div class="wrap about-who">
+  <div class="prose">{intro}</div>
+  {card}
  </div>
 </section>
 <section class="sec">
  <div class="wrap">
   <div class="sec-head"><div class="eyebrow">{esc(a["values_eyebrow"])}</div><h2>{esc(a["values_h"])}</h2></div>
   <div class="feats" style="margin-top:0">{values}</div>
-  <div class="mv">
-   <div class="mv-card mv-dark"><h3>{esc(a["mission_h"])}</h3><p>{esc(a["mission"])}</p></div>
-   <div class="mv-card"><h3>{esc(a["vision_h"])}</h3><p>{esc(a["vision"])}</p></div>
-  </div>
-  <p class="disclaimer">{ic("info")}<span>{esc(a["note"])}</span></p>
+ </div>
+</section>
+<section class="sec sec-dark">
+ <div class="wrap">
+  <div class="sec-head"><div class="eyebrow">{esc(a["steps_eyebrow"])}</div><h2>{esc(a["steps_h"])}</h2></div>
+  <ol class="steps">{steps}</ol>
+  <p class="disclaimer disclaimer-dark">{ic("info")}<span>{esc(a["note"])}</span></p>
   <p style="text-align:center;margin-top:30px"><a class="btn btn-cta btn-lg" href="{url("", lang)}#projects">{esc(t["home_cta2"])} {arrow}</a></p>
  </div>
 </section>'''
     org = SITE["domain"] + "/#organization"
+    person = SITE["domain"] + "/#owner"
     ld = json.dumps({"@context": "https://schema.org", "@graph": [
         {"@type": "RealEstateAgent", "@id": org, "name": SITE["brand"], "url": SITE["domain"] + "/", "telephone": SITE["tel_intl"],
-         "description": a["seo_desc"], "address": {"@type": "PostalAddress", "addressLocality": "Cairo", "addressCountry": "EG"}},
+         "email": SITE["email"], "description": a["seo_desc"], "founder": {"@id": person},
+         "address": {"@type": "PostalAddress", "addressLocality": "6th of October", "addressRegion": "Giza", "addressCountry": "EG"}},
+        {"@type": "Person", "@id": person, "name": SITE["owner"][lang], "jobTitle": SITE["owner_role"][lang],
+         "worksFor": {"@type": "Organization", "name": "Palm Hills Developments"}, "telephone": SITE["tel_intl"], "email": SITE["email"]},
         {"@type": "AboutPage", "url": url("about-us", lang, True), "name": a["seo_title"], "inLanguage": lang, "about": {"@id": org}}]},
         ensure_ascii=False, indent=1)
     return simple_shell(lang, t, "about-us", a["seo_title"], a["seo_desc"], body, ld=ld)
@@ -1084,7 +1110,7 @@ def privacy_page(lang):
  <div class="wrap">
   <div class="prose">
    {"".join(out)}
-   <div class="prose-box"><h3>{esc(d["contact_h"])}</h3><p>{esc(d["contact_p"])}</p><p><a class="ltr" href="mailto:{PRIVACY_EMAIL}">{PRIVACY_EMAIL}</a></p></div>
+   <div class="prose-box"><h3>{esc(d["contact_h"])}</h3><p>{esc(d["contact_p"])}</p><p><a class="ltr" href="mailto:{PRIVACY_EMAIL}">{PRIVACY_EMAIL}</a></p><p>{ic("whatsapp")} <a class="ltr" href="https://wa.me/{SITE["wa"]}" rel="noopener">{SITE["tel"]}</a></p></div>
    <p class="prose-date">{esc(d["updated"])}</p>
   </div>
  </div>
