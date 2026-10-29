@@ -6,6 +6,10 @@ CacheLookup off
 
 RewriteEngine On
 
+# Home pages mapped to their files explicitly so the Cache-Control header below applies to them too.
+RewriteRule ^$ /index.html [L]
+RewriteRule ^en/$ /en/index.html [L]
+
 # Build scripts, source data and future-project image sources are not part of the public site.
 RewriteRule ^(tools|data|docs)/ - [F,L]
 RewriteRule ^(CLAUDE|README)\.md$ - [F,L]
