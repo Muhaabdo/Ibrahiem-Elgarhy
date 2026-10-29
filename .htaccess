@@ -44,3 +44,11 @@ ErrorDocument 404 /404.html
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
+
+# Pages (HTML, robots, sitemap, llms.txt): the Hostinger CDN may keep them 5 minutes at most, browsers
+# always re-check. (Before this, a CDN edge kept serving the old WordPress home page for days.)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|txt|xml)$">
+    Header set Cache-Control "public, max-age=0, s-maxage=300, must-revalidate"
+  </FilesMatch>
+</IfModule>
