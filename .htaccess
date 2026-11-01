@@ -49,10 +49,11 @@ ErrorDocument 404 /404.html
   ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 
-# Pages (HTML, robots, sitemap, llms.txt): the Hostinger CDN may keep them 5 minutes at most, browsers
-# always re-check. (Before this, a CDN edge kept serving the old WordPress home page for days.)
+# Pages (HTML, robots, sitemap, llms.txt) are never stored on the Hostinger CDN: it does not cache HTML
+# unless told to, and a "public, s-maxage" header made it keep pages for days. no-cache keeps every
+# price update live the moment it is deployed.
 <IfModule mod_headers.c>
   <FilesMatch "\.(html|txt|xml)$">
-    Header set Cache-Control "public, max-age=0, s-maxage=300, must-revalidate"
+    Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
