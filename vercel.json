@@ -21,6 +21,21 @@
       "source": "/palm-hills-projects",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/eastcairo",
+      "destination": "/97-hills",
+      "permanent": true
+    },
+    {
+      "source": "/westcairo",
+      "destination": "/badya",
+      "permanent": true
+    },
+    {
+      "source": "/palm-hills-ocotber-projects",
+      "destination": "/badya",
+      "permanent": true
     }
   ],
   "headers": [
