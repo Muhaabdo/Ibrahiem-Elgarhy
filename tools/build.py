@@ -199,6 +199,7 @@ def footer(lang, t):
     <li><a href="{url("privacy-policy", lang)}">{esc(t["ft_priv"])}</a></li>
    </ul>
   </div>
+  <div class="ft-credit"><a href="https://mohabdo.com/" target="_blank" rel="noopener nofollow">Designed by <strong>mohabdo<span>.com</span></strong></a></div>
  </div>
 </footer>'''
 
