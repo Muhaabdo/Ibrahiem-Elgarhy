@@ -13,6 +13,9 @@
 var SHEET_NAME = 'Leads';
 var EMAIL_TO = 'ibrahimelgarhy1987@gmail.com';
 var EMAIL_CC = 'info@mohabdo.com';
+var TZ = 'Africa/Cairo';
+/* Google Ads wants seconds and the UTC offset; the offset follows Egypt's summer/winter time automatically. */
+function convTime_(d) { return Utilities.formatDate(d, TZ, "yyyy-MM-dd HH:mm:ssXXX"); }
 var STATUSES = ['New', 'Qualified', 'Potential', 'No answer', 'Not qualified', 'Meeting', 'Deal'];
 
 /* Client-facing columns first, marketing columns last. */
@@ -22,7 +25,8 @@ var COLUMNS = [
   ['Page', 'page'], ['Language', 'lang'], ['CTA', 'cta'], ['Country', 'country'],
   ['gclid', 'gclid'], ['gbraid', 'gbraid'], ['wbraid', 'wbraid'],
   ['utm_source', 'utm_source'], ['utm_medium', 'utm_medium'], ['utm_campaign', 'utm_campaign'],
-  ['utm_term', 'utm_term'], ['utm_content', 'utm_content'], ['Landing', 'landing'], ['Referrer', 'referrer']
+  ['utm_term', 'utm_term'], ['utm_content', 'utm_content'], ['Landing', 'landing'], ['Referrer', 'referrer'],
+  ['Conversion Time', '_convtime']   // for Google Ads offline conversions: yyyy-MM-dd HH:mm:ss+02:00
 ];
 
 function getSheet_() {
@@ -61,8 +65,10 @@ function doPost(e) {
     var sh = getSheet_();
     if (sh.getLastRow() === 0) setup();
     var repeat = isRepeat_(sh, d.phone);
+    var now = new Date();
     var row = COLUMNS.map(function (c) {
-      if (c[1] === 'date') return new Date();
+      if (c[1] === 'date') return now;
+      if (c[1] === '_convtime') return convTime_(now);
       if (c[1] === '_status') return 'New';
       if (c[0] === 'Notes') return repeat ? 'Repeat — number already in sheet' : '';
       if (c[1] === '_blank') return '';
@@ -71,6 +77,7 @@ function doPost(e) {
     });
     var r = sh.getLastRow() + 1;
     sh.getRange(r, 3).setNumberFormat('@');
+    sh.getRange(r, COLUMNS.length).setNumberFormat('@');
     sh.getRange(r, 1, 1, row.length).setValues([row]);
     notify_(d, repeat);
     return out_({ ok: true });
@@ -111,6 +118,18 @@ function notify_(d, repeat) {
 
 function out_(o) {
   return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
+}
+
+/* Run ONCE after pasting this version: adds the "Conversion Time" header and fills it for the leads
+   already in the sheet, from their Date column. Safe to run again (it only rewrites that column). */
+function addConversionTime() {
+  var sh = getSheet_(), col = COLUMNS.length;
+  sh.getRange(1, col).setValue('Conversion Time').setFontWeight('bold').setBackground('#686868').setFontColor('#FFFFFF');
+  var n = sh.getLastRow() - 1;
+  if (n < 1) return;
+  var dates = sh.getRange(2, 1, n, 1).getValues();
+  var out = dates.map(function (r) { return [r[0] instanceof Date ? convTime_(r[0]) : '']; });
+  sh.getRange(2, col, n, 1).setNumberFormat('@').setValues(out);
 }
 
 /* Run once from the editor to check that the email reaches Ibrahim (and you in CC). */
