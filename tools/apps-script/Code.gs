@@ -16,6 +16,8 @@ var EMAIL_CC = 'info@mohabdo.com';
 var TZ = 'Africa/Cairo';
 /* Google Ads wants seconds and the UTC offset; the offset follows Egypt's summer/winter time automatically. */
 function convTime_(d) { return Utilities.formatDate(d, TZ, "yyyy-MM-dd HH:mm:ssXXX"); }
+/* e.g. PHD-20261107115703-4821: submit time to the second + last 4 digits of the phone. */
+function leadId_(d, phone) { return 'PHD-' + Utilities.formatDate(d, TZ, "yyyyMMddHHmmss") + '-' + String(phone || '').replace(/\D/g, '').slice(-4); }
 var STATUSES = ['New', 'Qualified', 'Potential', 'No answer', 'Not qualified', 'Meeting', 'Deal'];
 
 /* Client-facing columns first, marketing columns last. */
@@ -26,7 +28,8 @@ var COLUMNS = [
   ['gclid', 'gclid'], ['gbraid', 'gbraid'], ['wbraid', 'wbraid'],
   ['utm_source', 'utm_source'], ['utm_medium', 'utm_medium'], ['utm_campaign', 'utm_campaign'],
   ['utm_term', 'utm_term'], ['utm_content', 'utm_content'], ['Landing', 'landing'], ['Referrer', 'referrer'],
-  ['Conversion Time', '_convtime']   // for Google Ads offline conversions: yyyy-MM-dd HH:mm:ss+02:00
+  ['Conversion Time', '_convtime'],  // for Google Ads offline conversions: yyyy-MM-dd HH:mm:ss+02:00
+  ['Lead ID', '_leadid']             // unique per lead: Order ID in Google Ads, so a re-import never counts it twice
 ];
 
 function getSheet_() {
@@ -69,6 +72,7 @@ function doPost(e) {
     var row = COLUMNS.map(function (c) {
       if (c[1] === 'date') return now;
       if (c[1] === '_convtime') return convTime_(now);
+      if (c[1] === '_leadid') return leadId_(now, d.phone);
       if (c[1] === '_status') return 'New';
       if (c[0] === 'Notes') return repeat ? 'Repeat — number already in sheet' : '';
       if (c[1] === '_blank') return '';
@@ -77,7 +81,7 @@ function doPost(e) {
     });
     var r = sh.getLastRow() + 1;
     sh.getRange(r, 3).setNumberFormat('@');
-    sh.getRange(r, COLUMNS.length).setNumberFormat('@');
+    sh.getRange(r, COLUMNS.length - 1, 1, 2).setNumberFormat('@');
     sh.getRange(r, 1, 1, row.length).setValues([row]);
     notify_(d, repeat);
     return out_({ ok: true });
@@ -120,16 +124,21 @@ function out_(o) {
   return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
 }
 
-/* Run ONCE after pasting this version: adds the "Conversion Time" header and fills it for the leads
-   already in the sheet, from their Date column. Safe to run again (it only rewrites that column). */
-function addConversionTime() {
-  var sh = getSheet_(), col = COLUMNS.length;
-  sh.getRange(1, col).setValue('Conversion Time').setFontWeight('bold').setBackground('#686868').setFontColor('#FFFFFF');
+/* Run ONCE after pasting this version: adds the "Conversion Time" and "Lead ID" headers and fills them
+   for the leads already in the sheet, from their Date and Phone. Safe to run again: existing Lead IDs are kept. */
+function addAdsColumns() {
+  var sh = getSheet_(), ct = COLUMNS.length - 1, id = COLUMNS.length;
+  sh.getRange(1, ct, 1, 2).setValues([['Conversion Time', 'Lead ID']])
+    .setFontWeight('bold').setBackground('#686868').setFontColor('#FFFFFF');
   var n = sh.getLastRow() - 1;
   if (n < 1) return;
-  var dates = sh.getRange(2, 1, n, 1).getValues();
-  var out = dates.map(function (r) { return [r[0] instanceof Date ? convTime_(r[0]) : '']; });
-  sh.getRange(2, col, n, 1).setNumberFormat('@').setValues(out);
+  var rows = sh.getRange(2, 1, n, 3).getValues();          // Date, Name, Phone
+  var ids = sh.getRange(2, id, n, 1).getValues();
+  var out = rows.map(function (r, k) {
+    var ok = r[0] instanceof Date;
+    return [ok ? convTime_(r[0]) : '', ids[k][0] || (ok ? leadId_(r[0], r[2]) : '')];
+  });
+  sh.getRange(2, ct, n, 2).setNumberFormat('@').setValues(out);
 }
 
 /* Run once from the editor to check that the email reaches Ibrahim (and you in CC). */
