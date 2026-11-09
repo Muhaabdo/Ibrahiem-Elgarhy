@@ -20,7 +20,7 @@ from pages_data import ABOUT, PRIVACY, PRIVACY_EMAIL, MISC  # noqa: E402
 
 LANGS = ("ar", "en")
 HOME_ON = True
-ASSET_V = "20261028f"
+ASSET_V = "20261109a"
 # The stylesheet is inlined: most visitors land on one page from an ad, so one less render-blocking request beats caching.
 CSS_INLINE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "css", "project.css"), encoding="utf-8").read().strip()
 

@@ -32,6 +32,19 @@
   /* ---------------- Attribution (gclid / gbraid / wbraid / utm_*) ----------------
      Captured the first time they appear in the URL and kept for 90 days, so a visitor who
      browses to another project page (or comes back later) is still attributed. */
+  /* Device IP for the leads sheet (Google Ads offline conversions can match on it). Browsers do not expose
+     the IP and the Apps Script endpoint cannot see it, so it is asked from ipify (IPv6 when the visitor has
+     one, else IPv4) — only once the visitor starts filling the form, never on page view. */
+  var IP = "", ipReq = null;
+  function fetchIP() {
+    if (ipReq) return ipReq;
+    try {
+      ipReq = fetch("https://api64.ipify.org?format=json", { cache: "no-store" })
+        .then(function (r) { return r.json(); }).then(function (j) { IP = (j && j.ip) || ""; }, function () {});
+    } catch (err) { ipReq = Promise.resolve(); }
+    return ipReq;
+  }
+
   var ATTR_KEYS = ["gclid", "gbraid", "wbraid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
   var ATTR_STORE = "phd_attr", ATTR_TTL = 90 * 864e5;
   function readAttr() {
@@ -265,7 +278,7 @@
       if (!el) return;
       el.addEventListener("input", function () {
         mark(el, false);
-        if (!form._started) { form._started = true; track("lead_form_start", { form_location: form.getAttribute("data-loc") || ctx.loc, unit_type: currentUnit() }); }
+        if (!form._started) { form._started = true; fetchIP(); track("lead_form_start", { form_location: form.getAttribute("data-loc") || ctx.loc, unit_type: currentUnit() }); }
       });
       el.addEventListener("change", function () { mark(el, false); });
     });
@@ -309,7 +322,7 @@
         gclid: a.gclid || "", gbraid: a.gbraid || "", wbraid: a.wbraid || "",
         utm_source: a.utm_source || "", utm_medium: a.utm_medium || "", utm_campaign: a.utm_campaign || "",
         utm_term: a.utm_term || "", utm_content: a.utm_content || "",
-        landing: a.landing || "", referrer: a.referrer || ""
+        landing: a.landing || "", referrer: a.referrer || "", ip: IP
       };
       track("generate_lead", { form_location: loc, unit_type: unit, phone_country: ph.country.iso, project: project });
 
@@ -344,10 +357,16 @@
       if (!CFG.endpoint) { console.warn("[site] No leads endpoint configured — lead not stored:", lead); return done(); }
       var finished = false, finish = function () { if (!finished) { finished = true; done(); } };
       setTimeout(finish, 4000);
-      try {
-        fetch(CFG.endpoint, { method: "POST", mode: "no-cors", keepalive: true, headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(lead) })
-          .then(finish, finish);
-      } catch (err) { finish(); }
+      function send() {
+        lead.ip = lead.ip || IP;
+        try {
+          fetch(CFG.endpoint, { method: "POST", mode: "no-cors", keepalive: true, headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(lead) })
+            .then(finish, finish);
+        } catch (err) { finish(); }
+      }
+      /* The IP is normally ready long before submit; never hold the lead more than 800 ms for it. */
+      if (lead.ip) send();
+      else { var sent = false, once = function () { if (!sent) { sent = true; send(); } }; fetchIP().then(once, once); setTimeout(once, 800); }
     });
 
     /* unit given (unit card) -> field hidden, message names the unit.

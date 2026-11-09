@@ -29,7 +29,8 @@ var COLUMNS = [
   ['utm_source', 'utm_source'], ['utm_medium', 'utm_medium'], ['utm_campaign', 'utm_campaign'],
   ['utm_term', 'utm_term'], ['utm_content', 'utm_content'], ['Landing', 'landing'], ['Referrer', 'referrer'],
   ['Conversion Time', '_convtime'],  // for Google Ads offline conversions: yyyy-MM-dd HH:mm:ss+02:00
-  ['Lead ID', '_leadid']             // unique per lead: Order ID in Google Ads, so a re-import never counts it twice
+  ['Lead ID', '_leadid'],            // unique per lead: Order ID in Google Ads, so a re-import never counts it twice
+  ['IP', 'ip']                       // device IP sent by the site (IPv6 or IPv4)
 ];
 
 function getSheet_() {
@@ -81,7 +82,7 @@ function doPost(e) {
     });
     var r = sh.getLastRow() + 1;
     sh.getRange(r, 3).setNumberFormat('@');
-    sh.getRange(r, COLUMNS.length - 1, 1, 2).setNumberFormat('@');
+    sh.getRange(r, COLUMNS.length - 2, 1, 3).setNumberFormat('@');
     sh.getRange(r, 1, 1, row.length).setValues([row]);
     notify_(d, repeat);
     return out_({ ok: true });
@@ -124,11 +125,11 @@ function out_(o) {
   return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON);
 }
 
-/* Run ONCE after pasting this version: adds the "Conversion Time" and "Lead ID" headers and fills them
+/* Run ONCE after pasting this version: adds the "Conversion Time", "Lead ID" and "IP" headers and fills them
    for the leads already in the sheet, from their Date and Phone. Safe to run again: existing Lead IDs are kept. */
 function addAdsColumns() {
-  var sh = getSheet_(), ct = COLUMNS.length - 1, id = COLUMNS.length;
-  sh.getRange(1, ct, 1, 2).setValues([['Conversion Time', 'Lead ID']])
+  var sh = getSheet_(), ct = COLUMNS.length - 2, id = COLUMNS.length - 1;
+  sh.getRange(1, ct, 1, 3).setValues([['Conversion Time', 'Lead ID', 'IP']])
     .setFontWeight('bold').setBackground('#686868').setFontColor('#FFFFFF');
   var n = sh.getLastRow() - 1;
   if (n < 1) return;
