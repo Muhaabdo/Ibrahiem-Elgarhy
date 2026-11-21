@@ -20,7 +20,7 @@ from pages_data import ABOUT, PRIVACY, PRIVACY_EMAIL, MISC  # noqa: E402
 
 LANGS = ("ar", "en")
 HOME_ON = True
-ASSET_V = "20261109a"
+ASSET_V = "20261121b"
 # The stylesheet is inlined: most visitors land on one page from an ad, so one less render-blocking request beats caching.
 CSS_INLINE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "css", "project.css"), encoding="utf-8").read().strip()
 
@@ -123,6 +123,12 @@ def unit_card(p, u, lang, t, title, launch=None):
                      f'<div class="spec"><span>{esc(t["u_deliv"])}</span><b class="ltr">{u.get("delivery", p["delivery"])}</b></div>')
     price = price_html(u["price"], t) if u["price"] else f'<b class="price-req">{esc(t["price_req"])}</b>'
     off = f'<span class="card-off">{esc(t["new_launch"])}</span>' if launch else ""
+    # Label only on cards with no delivery spec (BUA + land cards); cards that show the year keep it instead.
+    yrs = u.get("deliv_years", p.get("deliv_years")) if "land" in u else None
+    if yrs:
+        n = "".join("٠١٢٣٤٥٦٧٨٩"[int(c)] for c in str(yrs)) if t["dir"] == "rtl" else str(yrs)
+        off += f'<span class="card-deliv">{ic("key")} {esc(t["deliv_years"].format(y=n))}</span>'
+    off = f'<div class="card-flags">{off}</div>' if off else ""
     return f'''<article class="card">
     <div class="card-media">
      {mini}

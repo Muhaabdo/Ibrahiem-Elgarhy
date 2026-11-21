@@ -32,6 +32,7 @@ PROJECTS = {
         "region": {"ar": "مطروح", "en": "Matrouh"},
         "price_from": 12243000,
         "delivery": "2030",
+        "deliv_years": 4,  # label on every unit card
         "types": {"ar": ["Beach Homes", "شاليهات", "توين هاوس", "فيلات"], "en": ["Beach Homes", "Chalets", "Twin Houses", "Villas"]},
         "img": "hacienda-ras-el-hekma", "hero": "hero", "about_img": "pool-villa", "card": "beachfront-villa-s",
         "plans": [
@@ -141,6 +142,7 @@ PROJECTS = {
         "region": {"ar": "الجيزة", "en": "Giza"},
         "price_from": 7090120,
         "delivery": "2027 – 2031",
+        "deliv_years": 4,  # label on every unit card
         "types": {"ar": ["شقق", "تاون هاوس", "فيلات"], "en": ["Apartments", "Town Houses", "Villas"]},
         "img": "badya", "hero": "hero", "card": "hero-s", "about_img": "apartments-garden",
         "units_note": {
@@ -253,6 +255,7 @@ PROJECTS = {
         "region": {"ar": "القاهرة", "en": "Cairo"},
         "price_from": 29189000,
         "delivery": "2030",
+        "deliv_years": 4,  # label on every unit card
         "types": {"ar": ["Family Homes", "تاون هاوس", "فيلات"], "en": ["Family Homes", "Town Houses", "Villas"]},
         "img": "97-hills", "hero": "villa", "card": "villa-s", "about_img": "town-houses",
         "units_note": {
@@ -371,7 +374,7 @@ T = {
         "units_eyebrow": "Units & Prices", "units_h": "الوحدات المتاحة في {t}", "units_p": "اختار نوع الوحدة واعرف السعر وخطة السداد على واتساب",
         "u_area": "المساحة", "u_deliv": "الاستلام", "from": "تبدأ من", "egp": "جنيه", "sqm": "م²",
         "u_bua": "مساحة المباني", "u_land": "مساحة الأرض", "price_req": "السعر عند الطلب",
-        "new_launch": "لونش جديد", "fin_ff": "متشطب بالكامل", "fin_cs": "Core & Shell",
+        "new_launch": "لونش جديد", "deliv_years": "استلام {y} سنوات", "fin_ff": "متشطب بالكامل", "fin_cs": "Core & Shell",
         "launch_eyebrow": "New Launch", "launch_h": "مرحلة جديدة: {n}", "launch_pay": "مقدم {d}% وتقسيط حتى {y} سنوات",
         "units_disc": "الأسعار والوحدات المعروضة أعلاه استرشادية وقابلة للتغيير أو التحديث في أي وقت دون إشعار مسبق، حسب سياسة الشركة المطوّرة ومدى توافر الوحدات لديها. جميع الصور والمواد الترويجية تخص Palm Hills Developments وتُعرض بغرض التوضيح فقط.",
         "offer_h": "خصم يصل إلى <b>{p}%</b> مع تقسيط {y} سنوات", "offer_p": "أو مقدم {d}% وتقسيط حتى {yy} سنوات — اسأل عن الخطة الأنسب ليك.",
@@ -462,7 +465,7 @@ T = {
         "units_eyebrow": "Units & Prices", "units_h": "Available units in {t}", "units_p": "Pick a unit type and get the price and payment plan on WhatsApp",
         "u_area": "Area", "u_deliv": "Delivery", "from": "From", "egp": "EGP", "sqm": "m²",
         "u_bua": "Built-up area", "u_land": "Land area", "price_req": "Price on request",
-        "new_launch": "New launch", "fin_ff": "Fully finished", "fin_cs": "Core & Shell",
+        "new_launch": "New launch", "deliv_years": "Delivery in {y} years", "fin_ff": "Fully finished", "fin_cs": "Core & Shell",
         "launch_eyebrow": "New Launch", "launch_h": "New phase: {n}", "launch_pay": "{d}% down payment, up to {y} years installments",
         "units_disc": "Prices and units shown above are indicative and may change or be updated at any time without prior notice, according to the developer's policy and unit availability. All images and promotional materials belong to Palm Hills Developments and are shown for illustration only.",
         "offer_h": "Up to <b>{p}%</b> discount on the {y}-year plan", "offer_p": "Or {d}% down payment with up to {yy} years installments — ask for the plan that suits you.",
