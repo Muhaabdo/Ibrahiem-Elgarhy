@@ -125,7 +125,9 @@ def unit_card(p, u, lang, t, title, launch=None):
     off = f'<span class="card-off">{esc(t["new_launch"])}</span>' if launch else ""
     # Label only on cards with no delivery spec (BUA + land cards); cards that show the year keep it instead.
     yrs = u.get("deliv_years", p.get("deliv_years")) if "land" in u else None
-    if yrs:
+    if u.get("deliv_txt"):  # explicit delivery label (e.g. "Delivery from 2027") wins over the years count
+        off += f'<span class="card-deliv">{ic("key")} {esc(u["deliv_txt"][lang])}</span>'
+    elif yrs:
         n = "".join("٠١٢٣٤٥٦٧٨٩"[int(c)] for c in str(yrs)) if t["dir"] == "rtl" else str(yrs)
         off += f'<span class="card-deliv">{ic("key")} {esc(t["deliv_years"].format(y=n))}</span>'
     off = f'<div class="card-flags">{off}</div>' if off else ""
@@ -605,7 +607,7 @@ def project_page(slug, lang):
 </header>
 
 <main>
-<section class="hero{"" if hero_img else " hero-plain"}">
+<section class="hero{"" if hero_img else " hero-plain"}" id="top">
  {hero_tag(hero_img, title) if hero_img else ""}
  <div class="hero-in">
   <div class="eyebrow">{esc(p["area"][lang])}</div>
@@ -638,7 +640,7 @@ def project_page(slug, lang):
  <div class="wrap">
   <div class="sec-head"><div class="eyebrow">{esc(t["plans_eyebrow"])}</div><h2>{esc(t["plans_h"]).format(t=nt)}</h2><p>{esc(t["plans_p"])}</p></div>
   <div class="plans{" plans-1" if len(p["plans"]) == 1 else ""}">{plans_html(p, lang, t)}</div>
-  <div class="offer">
+  <div class="offer" id="offer">
    <div><h3>{offer_h}</h3><p>{esc(offer_p)}</p></div>
    <div><button class="btn btn-cta btn-lg" type="button" data-cta="offer">{ic("whatsapp")} {esc(t["offer_cta"])}</button></div>
   </div>
@@ -652,7 +654,7 @@ def project_page(slug, lang):
    <div class="about-text">{about_ps}<div class="about-facts">{facts}</div></div>
    {f'<div class="about-img"><img src="{img(p["img"], p["about_img"])}" alt="{esc(title)}" loading="lazy"></div>' if p.get("about_img") else ""}
   </div>
-  <div class="feats">{feats}</div>
+  <div class="feats" id="features">{feats}</div>
  </div>
 </section>
 
