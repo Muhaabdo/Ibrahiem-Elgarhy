@@ -344,6 +344,121 @@ PROJECTS = {
         },
         "gallery": [],
     },
+    # Prices: Sales Availability 19 Nov 2026, project "Village de la Capitale" (VDLC Phase 1 + 2), lowest Grand Total per type.
+    # Payment plan: from Abdo on 22 Nov 2026 (1.5% down, 12 years; 15% off on 10 years) — the only plan for now.
+    # No finishing labels on this project for now (Abdo, 22 Nov 2026).
+    # SEO: slug + title + H1 second line target "بالم هيلز العاصمة" (the higher-volume search); the project name stays the brand.
+    "palm-hills-new-capital": {
+        "name": "Village de la Capitale",
+        "title": "Village de la Capitale",
+        "ready": True,
+        "area": {"ar": "العاصمة الإدارية الجديدة — R4", "en": "New Administrative Capital — R4"},
+        "region": {"ar": "العاصمة الإدارية", "en": "New Capital"},
+        "aka": {"ar": "بالم هيلز العاصمة الإدارية", "en": "Palm Hills New Capital"},
+        "aliases": ["Palm Hills New Capital", "بالم هيلز العاصمة الإدارية", "فيلاج دي لا كابيتال", "VDLC"],
+        "aka_faq": {
+            "ar": ("هل بالم هيلز العاصمة الإدارية هو Village de la Capitale؟",
+                   "أيوه. Village de la Capitale (فيلاج دي لا كابيتال) هو مشروع بالم هيلز في العاصمة الإدارية الجديدة، وأول مشروع سكني للشركة هناك، في منطقة R4."),
+            "en": ("Is Palm Hills New Capital the same as Village de la Capitale?",
+                   "Yes. Village de la Capitale is the Palm Hills project in the New Administrative Capital and the company's first residential community there, in the R4 district."),
+        },
+        "price_from": 7127000,
+        "delivery": "2031",
+        "deliv_years": 4,  # same as 97 Hills (2031)
+        "types": {"ar": ["شقق", "تاون هاوس", "فيلات"], "en": ["Apartments", "Town Houses", "Villas"]},
+        "img": "palm-hills-new-capital", "hero": "hero", "card": "hero-s", "about_img": "apartments-pool",
+        # Images: official Palm Hills project page (palmhillsdevelopments.com), Nov 2026. No location map published there.
+        "plans": [
+            {"name": {"ar": "خطة السداد", "en": "Payment plan"},
+             "steps": [(1.5, {"ar": "مقدم تعاقد", "en": "Down payment"})],
+             "terms": [(12, 0), (10, 15)]},
+        ],
+        "hero_sub": {
+            "ar": "أول مشروع سكني لـ Palm Hills Developments في العاصمة الإدارية الجديدة — بمقدم 1.5% وتقسيط حتى 12 سنة",
+            "en": "Palm Hills Developments' first residential community in the New Administrative Capital — 1.5% down payment, up to 12 years",
+        },
+        "seo": {
+            "ar": {
+                "title": "بالم هيلز العاصمة | أسعار فيلاج دي لا كابيتال 2026",
+                "desc": "بالم هيلز العاصمة الإدارية (فيلاج دي لا كابيتال): شقق تبدأ من 7,127,000 جنيه وتاون هاوس وفيلات. مقدم 1.5% وتقسيط حتى 12 سنة، وخصم 15% على 10 سنوات.",
+            },
+            "en": {
+                "title": "Palm Hills New Capital | Village de la Capitale Prices 2026",
+                "desc": "Palm Hills New Capital (Village de la Capitale): apartments from EGP 7,127,000, town houses and villas. 1.5% down, up to 12 years, 15% off on 10 years.",
+            },
+        },
+        "about": {
+            "ar": [
+                "Village de la Capitale أول مشروع سكني من Palm Hills Developments في العاصمة الإدارية الجديدة، على مساحة 314 فدان في منطقة R4، وهو أقرب كمبوند سكني في العاصمة للقاهرة الجديدة — 7 دقايق بس من Palm Hills New Cairo.",
+                "الماستر بلان متصمم مع SWA، شركة عالمية متخصصة في اللاندسكيب، والتخطيط ماشي مع طبيعة الأرض ومستوياتها، فالمساحات الخضراء والممرات والمسطحات المائية ممتدة بين الوحدات. المشروع بيضم شقق من غرفة لـ 3 غرف (منها شقق بجاردن)، وتاون هاوس وفيلات، ومعاه مدرسة دولية ومنطقة تجارية وكلوب هاوس، والاستلام المتوقع في 2031.",
+            ],
+            "en": [
+                "Village de la Capitale is Palm Hills Developments' first residential community in the New Administrative Capital, spread over 314 feddans in the R4 district. It is the closest residential community to New Cairo, only seven minutes from Palm Hills New Cairo.",
+                "The master plan was designed with SWA, an international landscape firm, and follows the land's natural levels, so green spaces, pathways and water features run between the homes. The community includes one- to three-bedroom apartments (some with gardens), town houses and villas, with an international school, a commercial hub and a clubhouse. Delivery is expected in 2031.",
+            ],
+        },
+        "facts": [
+            {"v": "314", "ar": "فدان مساحة المشروع", "en": "feddans total area"},
+            {"v": "1.5%", "ar": "مقدم التعاقد", "en": "down payment"},
+            {"v": "12", "ar": "سنة تقسيط", "en": "years installments"},
+            {"v": "2031", "ar": "الاستلام المتوقع", "en": "expected delivery"},
+        ],
+        "features": [
+            {"ic": "landmark", "ar": ("أول مشروع لبالم هيلز في العاصمة", "أول مجتمع سكني للشركة داخل العاصمة الإدارية الجديدة."),
+             "en": ("Palm Hills' first in the Capital", "The company's first residential community in the New Capital.")},
+            {"ic": "tree", "ar": ("لاندسكيب من تصميم SWA", "مساحات خضراء وممرات ومسطحات مائية ماشية مع طبيعة الأرض."),
+             "en": ("Landscape by SWA", "Green spaces, pathways and water features shaped around the land.")},
+            {"ic": "swim", "ar": ("حمامات سباحة", "مجموعة حمامات سباحة وسط المساحات الخضراء."),
+             "en": ("Swimming pools", "A collection of pools set within the green spaces.")},
+            {"ic": "dumbbell", "ar": ("ملاعب ونادي رياضي", "جيم وملاعب تنس وبادل وكرة قدم."),
+             "en": ("Sports facilities", "Gym and tennis, padel and football courts.")},
+            {"ic": "grad", "ar": ("مدرسة دولية", "مدرسة دولية جوه المشروع بمنهج عالمي."),
+             "en": ("International school", "An international school inside the community.")},
+            {"ic": "store", "ar": ("منطقة تجارية وكلوب هاوس", "محلات وكافيهات وخدمات، وكلوب هاوس في قلب المشروع."),
+             "en": ("Commercial hub & clubhouse", "Shops, cafés and services, plus a clubhouse at the heart of the community.")},
+        ],
+        "units": [
+            {"name": "1 Bedroom Apartment", "sub": {"ar": "شقة غرفة نوم واحدة", "en": "One-bedroom apartment"},
+             "area": "61.5 – 62.5", "price": 7127000, "badges": ["Typical", "Garden"], "imgs": ["apartments-a-s", "apartments-lagoon-s"]},
+            {"name": "2 Bedroom Apartment", "sub": {"ar": "شقة غرفتين نوم", "en": "Two-bedroom apartment"},
+             "area": "94 – 102", "price": 10867000, "badges": ["Typical", "Garden"], "imgs": ["apartments-lagoon-s", "apartments-pool-s"]},
+            {"name": "3 Bedroom Apartment", "sub": {"ar": "شقة 3 غرف نوم", "en": "Three-bedroom apartment"},
+             "area": "146 – 150", "price": 14809000, "badges": ["Typical"], "imgs": ["apartments-pool-s", "apartments-a-s"]},
+            {"name": "Town House Middle", "sub": {"ar": "تاون هاوس ميدل — روف 59.5 م²", "en": "Middle town house — 59.5 m² roof"},
+             "bua": "176.5", "land": "186", "price": 24783000, "badges": [], "imgs": ["town-house-s"]},
+            {"name": "Town House Corner", "sub": {"ar": "تاون هاوس كورنر — روف 59.5 م²", "en": "Corner town house — 59.5 m² roof"},
+             "bua": "176.5", "land": "186", "price": 27284000, "badges": [], "imgs": ["town-house-s"]},
+            {"name": "Villa C", "sub": {"ar": "فيلا مستقلة", "en": "Standalone villa"},
+             "bua": "185", "land": "282", "price": 31844000, "badges": [], "imgs": ["villa-patio-s", "villas-pool-s"]},
+            {"name": "Villa A", "sub": {"ar": "فيلا مستقلة — روف 91.5 م²", "en": "Standalone villa — 91.5 m² roof"},
+             "bua": "262", "land": "371.5", "price": 44970000, "badges": [], "imgs": ["villas-pool-s", "villa-patio-s"]},
+        ],
+        "loc_p": {"ar": "أقرب كمبوند سكني في العاصمة الإدارية للقاهرة الجديدة", "en": "The New Capital's closest residential community to New Cairo"},
+        "location": {
+            "text": {
+                "ar": "Village de la Capitale في منطقة R4 بالعاصمة الإدارية الجديدة، وهو أقرب كمبوند سكني في العاصمة للقاهرة الجديدة، على بعد 7 دقايق من Palm Hills New Cairo، وبوصول سهل لمحور بن زايد.",
+                "en": "Village de la Capitale is in the R4 district of the New Administrative Capital. It is the Capital's closest residential community to New Cairo, seven minutes from Palm Hills New Cairo, with easy access to Bin Zayed Axis.",
+            },
+            "points": [
+                {"b": {"ar": "Palm Hills New Cairo", "en": "Palm Hills New Cairo"}, "s": {"ar": "7 دقايق بس", "en": "Only seven minutes away"}},
+                {"b": {"ar": "محور بن زايد", "en": "Bin Zayed Axis"}, "s": {"ar": "وصول مباشر للمحاور الرئيسية", "en": "Direct access to the main roads"}},
+                {"b": {"ar": "النهر الأخضر", "en": "Green River"}, "s": {"ar": "الحديقة المركزية للعاصمة", "en": "The Capital's central green spine"}},
+                {"b": {"ar": "الحي الحكومي", "en": "Government District"}, "s": {"ar": "الوزارات ومجلس الوزراء", "en": "Ministries and the Cabinet"}},
+                {"b": {"ar": "البرج الأيقوني", "en": "Iconic Tower"}, "s": {"ar": "حي المال والأعمال", "en": "The Central Business District"}},
+                {"b": {"ar": "القاهرة الجديدة", "en": "New Cairo"}, "s": {"ar": "عن طريق محور بن زايد وطريق السويس", "en": "Via Bin Zayed Axis and Suez Road"}},
+            ],
+        },
+        "gallery": [
+            {"img": "hero", "cap": {"ar": "ممشى على البحيرات وسط الخضرة", "en": "Lagoon-side walkway"}},
+            {"img": "apartments-pool", "cap": {"ar": "العمارات وحمام السباحة", "en": "Apartment buildings and pool"}},
+            {"img": "apartments-lagoon", "cap": {"ar": "عمارات على المسطحات المائية", "en": "Apartments by the water"}},
+            {"img": "pool-walk", "cap": {"ar": "حمامات سباحة بين التاون هاوس", "en": "Pools between the town houses"}},
+            {"img": "villas-pool", "cap": {"ar": "فيلات على حمام السباحة", "en": "Villas by the pool"}},
+            {"img": "town-house", "cap": {"ar": "تاون هاوس بجاردن", "en": "Town house with garden"}},
+            {"img": "villa-patio", "cap": {"ar": "جلسة خارجية في فيلا", "en": "Villa patio"}},
+            {"img": "sports", "cap": {"ar": "الملاعب الرياضية", "en": "Sports courts"}},
+        ],
+    },
 }
 
 
@@ -406,7 +521,7 @@ T = {
         "ft_disc": "<strong>إخلاء مسؤولية:</strong> palmhillsdev.com منصة تسويقية يملكها ويديرها <strong>إبراهيم الجارحي، مدير مبيعات في بالم هيلز</strong>. هذا الموقع <strong>ليس الموقع الرسمي</strong> لشركة بالم هيلز للتطوير العقاري. الأسعار وخطط السداد والمواصفات المعروضة للاسترشاد فقط، وقابلة للتغيير حسب سياسة الشركة ومدى توافر الوحدات دون إشعار مسبق، ولا تمثل عرضًا ملزمًا للبيع. التعاقد النهائي يتم مباشرةً مع الشركة المطوّرة. جميع الصور والعلامات التجارية وأسماء المشروعات مملوكة لأصحابها وتُعرض بغرض التوضيح.",
         "ft_rights": "جميع الحقوق محفوظة", "ft_about": "من نحن", "ft_priv": "سياسة الخصوصية",
         "home_seo_title": "palmhillsdev | أسعار مشاريع بالم هيلز 2026",
-        "home_seo_desc": "أسعار وخطط سداد مشاريع بالم هيلز: بادية و97 Hills وهاسيندا رأس الحكمة. مقدم يبدأ من 1.5% وتقسيط حتى 12 سنة. منصة يملكها إبراهيم الجارحي، مدير مبيعات في بالم هيلز.",
+        "home_seo_desc": "أسعار وخطط سداد مشاريع بالم هيلز: بادية و97 Hills وهاسيندا رأس الحكمة وبالم هيلز العاصمة الإدارية. مقدم من 1.5% وتقسيط حتى 12 سنة. منصة إبراهيم الجارحي، مدير مبيعات في بالم هيلز.",
         "home_nav": [("#projects", "المشاريع"), ("#compare", "مقارنة الأسعار"), ("#about", "مين إحنا"), ("#developer", "عن المطوّر"), ("#faq", "أسئلة شائعة")],
         "home_eyebrow": "palmhillsdev",
         "home_h1": "أسعار مشاريع بالم هيلز من داخل فريق المبيعات",
@@ -497,7 +612,7 @@ T = {
         "ft_disc": "<strong>Disclaimer:</strong> palmhillsdev.com is a marketing platform owned and run by <strong>Ibrahim El Garhy, Sales Manager at Palm Hills</strong>. This is <strong>not the official website</strong> of Palm Hills Developments. Prices, payment plans and specifications are indicative, may change without notice according to the company’s policy and unit availability, and are not a binding offer. The final contract is signed directly with the developer. All images, trademarks and project names belong to their owners and are shown for illustration.",
         "ft_rights": "All rights reserved", "ft_about": "About Us", "ft_priv": "Privacy Policy",
         "home_seo_title": "palmhillsdev | Palm Hills Project Prices 2026",
-        "home_seo_desc": "Prices and payment plans for Palm Hills projects: Badya, 97 Hills and Hacienda Ras El Hekma. Down payment from 1.5%, up to 12 years. Run by Ibrahim El Garhy, Sales Manager at Palm Hills.",
+        "home_seo_desc": "Prices and payment plans for Palm Hills projects: Badya, 97 Hills, Hacienda Ras El Hekma and Palm Hills New Capital. 1.5% down, up to 12 years. By Ibrahim El Garhy, Palm Hills Sales Manager.",
         "home_nav": [("#projects", "Projects"), ("#compare", "Compare prices"), ("#about", "Who we are"), ("#developer", "The developer"), ("#faq", "FAQ")],
         "home_eyebrow": "palmhillsdev",
         "home_h1": "Palm Hills prices from inside the sales team",

@@ -347,6 +347,8 @@ def project_faq(p, lang, t):
                            else f'{u["name"]} from {egp} {money(u["price"])}') for u in units if u.get("price"))
     size_list = sep.join(f'{u["name"]} ({unit_size(u, t)})' for u in units if u.get("area") or u.get("bua"))
     qa = []
+    if p.get("aka_faq"):
+        qa.append(p["aka_faq"][lang])
     if ar:
         qa.append((f"فين مكان {name}؟", f'{p["location"]["text"]["ar"]} المشروع من تطوير Palm Hills Developments.'))
         qa.append((f"أسعار {name} بتبدأ من كام؟",
@@ -402,6 +404,7 @@ def jsonld(slug, p, lang, t):
             {"@type": "ListItem", "position": 1, "name": t["crumb_home"], "item": url("", lang, True)},
             {"@type": "ListItem", "position": 2, "name": p["title"], "item": page}]},
         {"@type": "ApartmentComplex", "@id": page + "#project", "name": p["title"], "url": page,
+         **({"alternateName": p["aliases"]} if p.get("aliases") else {}),
          "description": p["about"][lang][0], "image": hero,
          "address": {"@type": "PostalAddress", "addressLocality": p["area"]["en"], "addressRegion": p.get("region", {}).get("en", "Giza"), "addressCountry": "EG"}},
         {"@type": "FAQPage", "@id": page + "#faq", "inLanguage": lang, "mainEntity": [
@@ -426,7 +429,7 @@ def build_og():
         print("og images: Pillow not installed, keeping existing files")
         return
     for slug, p in PROJECTS.items():
-        if not p.get("hero"):
+        if not p.get("hero") or not p.get("ready"):
             continue
         src = os.path.join(ROOT, "assets", "img", "projects", p["img"], p["hero"] + ".webp")
         dst = os.path.join(ROOT, "assets", "img", "projects", p["img"], "og.jpg")
@@ -606,7 +609,7 @@ def project_page(slug, lang):
  {hero_tag(hero_img, title) if hero_img else ""}
  <div class="hero-in">
   <div class="eyebrow">{esc(p["area"][lang])}</div>
-  <h1><span class="ltr">{esc(title)}</span></h1>
+  <h1><span class="ltr">{esc(title)}</span>{f'<span class="h1-aka">{esc(p["aka"][lang])}</span>' if p.get("aka") else ""}</h1>
   <p class="hero-sub">{esc(p["hero_sub"][lang])}</p>
   {offer_badge}
   <div class="hero-stats">
@@ -1117,7 +1120,8 @@ def llms_txt():
            f'Contact: phone / WhatsApp {SITE["tel_intl"]}, email {SITE["email"]}. The site is available in Arabic ({d}/) and English ({d}/en/).', "",
            "## Projects (Palm Hills Developments)", ""]
     for slug, p in ready:
-        out.append(f'- [{p["title"]}]({url(slug, "en", True)}): {p["area"]["en"]}. From EGP {money(p["price_from"])}, '
+        aka = f' (also known as {p["aka"]["en"]})' if p.get("aka") else ""
+        out.append(f'- [{p["title"]}]({url(slug, "en", True)}){aka}: {p["area"]["en"]}. From EGP {money(p["price_from"])}, '
                    f'{p["down"]}% down payment, up to {p["years"]} years installments, delivery {p["delivery"]}.')
     out += ["", "## About", "",
             f'- [About {SITE["brand"]}]({url("about-us", "en", True)}): who runs the platform and how to contact him.',
