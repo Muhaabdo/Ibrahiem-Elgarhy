@@ -260,7 +260,7 @@ PROJECTS = {
         "region": {"ar": "الجيزة", "en": "Giza"},
         "aliases": ["P/X", "PX Palm Hills", "بي اكس بالم هيلز", "PX October"],
         "price_from": 15226000,
-        "delivery": "2027 – 2030",
+        "delivery": "2028",
         "types": {"ar": ["شقق", "تاون هاوس", "فيلات"], "en": ["Apartments", "Town Houses", "Villas"]},
         "units_note": {
             "ar": "الشقق بتتسلم متشطبة بالكامل والسعر شامل التشطيب. التاون هاوس والفيلات بتتسلم Core & Shell.",
@@ -276,39 +276,39 @@ PROJECTS = {
              "terms": [(7.5, 0)]},
         ],
         "hero_sub": {
-            "ar": "على أعلى نقطة في بالم هيلز أكتوبر — شقق متشطبة بالكامل باستلام من 2027، وتاون هاوس وفيلات، بمقدم 5% وتقسيط حتى 10 سنوات",
-            "en": "On the highest point of Palm Hills October — fully finished apartments with delivery from 2027, plus town houses and villas, 5% down and up to 10 years",
+            "ar": "على أعلى نقطة في بالم هيلز أكتوبر — شقق متشطبة بالكامل وتاون هاوس وفيلات، استلام سنتين بمقدم 5% وتقسيط حتى 10 سنوات",
+            "en": "On the highest point of Palm Hills October — fully finished apartments, town houses and villas, delivery in 2 years, 5% down and up to 10 years",
         },
         "seo": {
             "ar": {
                 "title": "PX بالم هيلز أكتوبر | أسعار بي اكس وخطط السداد 2026",
-                "desc": "PX بالم هيلز في أكتوبر: شقق متشطبة بالكامل تبدأ من 15,226,000 جنيه باستلام من 2027، وتاون هاوس وفيلات. مقدم 5% وتقسيط حتى 10 سنوات، وخصم حتى 40%.",
+                "desc": "PX بالم هيلز في أكتوبر: شقق متشطبة بالكامل تبدأ من 15,226,000 جنيه وتاون هاوس وفيلات، استلام سنتين. مقدم 5% وتقسيط حتى 10 سنوات، وخصم حتى 40%.",
             },
             "en": {
                 "title": "PX Palm Hills October | Prices & Payment Plans 2026",
-                "desc": "PX by Palm Hills in October: fully finished apartments from EGP 15,226,000 with delivery from 2027, plus town houses and villas. 5% down, up to 10 years, up to 40% off.",
+                "desc": "PX by Palm Hills in October: fully finished apartments from EGP 15,226,000, town houses and villas, delivery in 2 years. 5% down, up to 10 years, up to 40% off.",
             },
         },
         "about": {
             "ar": [
                 "PX (P/X) مشروع سكني من Palm Hills Developments على أعلى نقطة في منطقة بالم هيلز أكتوبر بغرب القاهرة، فالوحدات على مستويات مرتفعة بإطلالات مفتوحة على الأهرامات وملاعب الجولف المجاورة.",
-                "رغم إنه أعلى من باقي المشاريع، PX في النص بين مشاريع بالم هيلز في أكتوبر، وقريب من Palm Central والأندية والمولات. جوه المشروع فندق The St. Regis Palm Hills بشقق فندقية وبراندد ريزيدنسز، وامتداد جديد لنادي بالم هيلز الرياضي. المتاح: شقق متشطبة بالكامل من غرفة لـ 3 غرف ونانى، وتاون هاوس وفيلات، والشقق بتبدأ تتسلم من 2027.",
+                "رغم إنه أعلى من باقي المشاريع، PX في النص بين مشاريع بالم هيلز في أكتوبر، وقريب من Palm Central والأندية والمولات. جوه المشروع فندق The St. Regis Palm Hills بشقق فندقية وبراندد ريزيدنسز، وامتداد جديد لنادي بالم هيلز الرياضي. المتاح: شقق متشطبة بالكامل من غرفة لـ 3 غرف ونانى، وتاون هاوس وفيلات، والاستلام خلال سنتين.",
             ],
             "en": [
                 "PX (P/X) is a residential project by Palm Hills Developments on the highest point of the Palm Hills October area in West Cairo, so homes sit on raised levels with open views of the Pyramids and the neighbouring golf courses.",
-                "Although it sits higher than the other projects, PX is central to Palm Hills' October communities, close to Palm Central, the clubs and the malls. Inside the project are The St. Regis Palm Hills hotel, with serviced apartments and branded residences, and a new extension of Palm Hills Sports Club. Available now: fully finished one- to three-bedroom-plus-nanny apartments, town houses and villas, with apartment delivery starting in 2027.",
+                "Although it sits higher than the other projects, PX is central to Palm Hills' October communities, close to Palm Central, the clubs and the malls. Inside the project are The St. Regis Palm Hills hotel, with serviced apartments and branded residences, and a new extension of Palm Hills Sports Club. Available now: fully finished one- to three-bedroom-plus-nanny apartments, town houses and villas, with delivery in 2 years.",
             ],
         },
         "facts": [
             {"v": "5%", "ar": "مقدم التعاقد", "en": "down payment"},
             {"v": "10", "ar": "سنين تقسيط", "en": "years installments"},
-            {"v": "2027", "ar": "بداية الاستلام", "en": "delivery starts"},
+            {"v": "2", "ar": "سنين للاستلام", "en": "years to delivery"},
         ],
         "features": [
             {"ic": "mountain", "ar": ("إطلالة على الأهرامات", "أعلى نقطة في بالم هيلز أكتوبر بإطلالة على الأهرامات وملاعب الجولف."),
              "en": ("Pyramids views", "The highest point of Palm Hills October, overlooking the Pyramids and golf courses.")},
-            {"ic": "clock", "ar": ("استلام قريب", "الشقق بتبدأ تتسلم من 2027، والتاون هاوس من 2027 و2028."),
-             "en": ("Near delivery", "Apartments start delivering in 2027, town houses in 2027 and 2028.")},
+            {"ic": "clock", "ar": ("استلام قريب", "استلام خلال سنتين بس من التعاقد."),
+             "en": ("Near delivery", "Delivery in just 2 years.")},
             {"ic": "key", "ar": ("شقق متشطبة بالكامل", "الشقق بتتسلم متشطبة، والسعر المعروض شامل التشطيب."),
              "en": ("Fully finished apartments", "Apartments are delivered finished; the price shown includes finishing.")},
             {"ic": "hotel", "ar": ("The St. Regis Palm Hills", "فندق وشقق فندقية وبراندد ريزيدنسز جوه PX."),
