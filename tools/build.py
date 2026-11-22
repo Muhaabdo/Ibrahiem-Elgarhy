@@ -119,8 +119,9 @@ def unit_card(p, u, lang, t, title, launch=None):
     elif "area" not in u:
         spec_html = f'<div class="spec"><span>{esc(t["u_deliv"])}</span><b class="ltr">{u.get("delivery", p["delivery"])}</b></div>'
     else:
-        spec_html = (f'<div class="spec"><span>{esc(t["u_area"])}</span><b><span class="ltr">{esc(u["area"])}</span> {esc(t["sqm"])}</b></div>'
-                     f'<div class="spec"><span>{esc(t["u_deliv"])}</span><b class="ltr">{u.get("delivery", p["delivery"])}</b></div>')
+        spec_html = (f'<div class="spec"><span>{esc(t["u_area"])}</span><b><span class="ltr">{esc(u["area"])}</span> {esc(t["sqm"])}</b></div>' +
+                     (f'<div class="spec"><span>{esc(t["u_down"])}</span><b class="ltr">{esc(u["down"])}</b></div>' if u.get("down") else
+                      f'<div class="spec"><span>{esc(t["u_deliv"])}</span><b class="ltr">{u.get("delivery", p["delivery"])}</b></div>'))
     price = price_html(u["price"], t) if u["price"] else f'<b class="price-req">{esc(t["price_req"])}</b>'
     off = f'<span class="card-off">{esc(t["new_launch"])}</span>' if launch else ""
     # Label only on cards with no delivery spec (BUA + land cards); cards that show the year keep it instead.
