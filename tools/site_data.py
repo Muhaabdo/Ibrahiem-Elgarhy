@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Single source of truth for the project landing pages.
 
-Prices come from "Sales Availability 1 Oct 2026" (column Grand Total = full price before
+Prices come from "Sales Availability 19 Nov 2026" (column Grand Total = full price before
 any discount). Update the numbers here and run:  python3 tools/build.py
 """
 
@@ -21,7 +21,7 @@ SITE = {
 }
 
 # Order = order of the "other projects" carousel.
-# Prices: "Sales Availability Report" 26 Oct 2026 — lowest Grand Total per unit type (full price, no discount).
+# Prices: "Sales Availability Report" 19 Nov 2026 — lowest Grand Total per unit type (full price, no discount).
 # Payment plans: sent by Ibrahim on 26 Oct 2026. `terms` = (years, discount %); 0 = original price.
 PROJECTS = {
     "hacienda-ras-el-hekma": {
@@ -141,7 +141,7 @@ PROJECTS = {
         "area": {"ar": "أكتوبر — غرب القاهرة", "en": "6th of October — West Cairo"},
         "region": {"ar": "الجيزة", "en": "Giza"},
         "price_from": 7090120,
-        "delivery": "2027 – 2031",
+        "delivery": "2029 – 2031",
         "deliv_years": 4,  # label on every unit card
         "types": {"ar": ["شقق", "تاون هاوس", "فيلات"], "en": ["Apartments", "Town Houses", "Villas"]},
         "img": "badya", "hero": "hero", "card": "hero-s", "about_img": "apartments-garden",
@@ -185,7 +185,7 @@ PROJECTS = {
         "facts": [
             {"v": "6", "ar": "أحياء سكنية", "en": "residential districts"},
             {"v": "1.5%", "ar": "مقدم التعاقد", "en": "down payment"},
-            {"v": "2028", "ar": "بداية الاستلام", "en": "delivery starts"},
+            {"v": "2029", "ar": "بداية الاستلام", "en": "delivery starts"},
         ],
         "features": [
             {"ic": "grad", "ar": ("جامعة بادية الدولية", "جامعة جوه المدينة، ومعاها مدارس وحضانات."),
@@ -205,17 +205,17 @@ PROJECTS = {
             {"name": "1 Bedroom Apartment", "sub": {"ar": "شقة غرفة نوم واحدة", "en": "One-bedroom apartment"},
              "area": "58 – 70", "delivery": "2029 – 2031", "price": 7090120, "finish": "ff", "badges": ["Typical", "Garden", "Penthouse"], "imgs": ["apartments-a-s", "apartments-b-s"]},
             {"name": "2 Bedroom Apartment", "sub": {"ar": "شقة غرفتين نوم", "en": "Two-bedroom apartment"},
-             "area": "93 – 173", "delivery": "2027 – 2031", "price": 10196240, "finish": "ff", "badges": ["Typical", "Garden", "Penthouse"], "imgs": ["apartments-b-s", "apartments-c-s"]},
+             "area": "93 – 135", "delivery": "2029 – 2031", "price": 9759360, "finish": "ff", "badges": ["Typical", "Garden", "Penthouse"], "imgs": ["apartments-b-s", "apartments-c-s"]},
             {"name": "3 Bedroom Apartment", "sub": {"ar": "شقة 3 غرف نوم", "en": "Three-bedroom apartment"},
-             "area": "125 – 168", "delivery": "2028 – 2031", "price": 11825000, "finish": "ff", "badges": ["Typical", "Garden", "Penthouse"], "imgs": ["apartments-c-s", "apartments-garden-s"]},
+             "area": "125 – 168", "delivery": "2029 – 2031", "price": 11825000, "finish": "ff", "badges": ["Typical", "Garden", "Penthouse"], "imgs": ["apartments-c-s", "apartments-garden-s"]},
             {"name": "Town House Middle", "sub": {"ar": "تاون هاوس ميدل — روف 68 م²", "en": "Middle town house — 68 m² roof"},
              "bua": "190.5", "land": "189.5", "price": 22005000, "finish": "cs", "badges": [], "imgs": ["town-houses-s", "town-houses-lagoon-s"]},
             {"name": "Town House Corner", "sub": {"ar": "تاون هاوس كورنر", "en": "Corner town house"},
-             "bua": "194", "land": "230", "price": 23734000, "finish": "cs", "badges": [], "imgs": ["town-houses-lagoon-s", "town-houses-s"]},
+             "bua": "194", "land": "230", "price": 23968000, "finish": "cs", "badges": [], "imgs": ["town-houses-lagoon-s", "town-houses-s"]},
             {"name": "Villa N2", "sub": {"ar": "فيلا مستقلة", "en": "Standalone villa"},
              "bua": "180", "land": "255", "price": 25762000, "finish": "cs", "badges": [], "imgs": ["villa-a-s", "villa-b-s"]},
             {"name": "Villa Z2", "sub": {"ar": "فيلا مستقلة", "en": "Standalone villa"},
-             "bua": "275.5", "land": "401", "price": 34092000, "finish": "cs", "badges": [], "imgs": ["villa-b-s", "villa-pool-s"]},
+             "bua": "275.5", "land": "401", "price": 34745000, "finish": "cs", "badges": [], "imgs": ["villa-b-s", "villa-pool-s"]},
             {"name": "Villa X2", "sub": {"ar": "فيلا مستقلة", "en": "Standalone villa"},
              "bua": "364", "land": "550", "price": 43189000, "finish": "cs", "badges": [], "imgs": ["villa-pool-s", "villa-c-s"]},
             {"name": "Villa W2", "sub": {"ar": "فيلا مستقلة", "en": "Standalone villa"},
@@ -254,7 +254,7 @@ PROJECTS = {
         "area": {"ar": "القاهرة الجديدة", "en": "New Cairo"},
         "region": {"ar": "القاهرة", "en": "Cairo"},
         "price_from": 29189000,
-        "delivery": "2030",
+        "delivery": "2031",
         "deliv_years": 4,  # label on every unit card
         "types": {"ar": ["Family Homes", "تاون هاوس", "فيلات"], "en": ["Family Homes", "Town Houses", "Villas"]},
         "img": "97-hills", "hero": "villa", "card": "villa-s", "about_img": "town-houses",
@@ -275,27 +275,27 @@ PROJECTS = {
         "seo": {
             "ar": {
                 "title": "97 هيلز بالم هيلز | أسعار 97 Hills وخطط السداد 2026",
-                "desc": "97 Hills من بالم هيلز: Family Homes وتاون هاوس متشطبة بالكامل وفيلات. الأسعار تبدأ من 29,189,000 جنيه بمقدم 2.8% وتقسيط حتى 10 سنوات. استلام 2030.",
+                "desc": "97 Hills من بالم هيلز: Family Homes وتاون هاوس متشطبة بالكامل وفيلات. الأسعار تبدأ من 29,189,000 جنيه بمقدم 2.8% وتقسيط حتى 10 سنوات. استلام 2031.",
             },
             "en": {
                 "title": "97 Hills Palm Hills | Prices & Payment Plans 2026",
-                "desc": "97 Hills by Palm Hills: fully finished family homes and town houses, plus villas. From EGP 29,189,000 with 2.8% down payment and up to 10 years. Delivery 2030.",
+                "desc": "97 Hills by Palm Hills: fully finished family homes and town houses, plus villas. From EGP 29,189,000 with 2.8% down payment and up to 10 years. Delivery 2031.",
             },
         },
         "about": {
             "ar": [
                 "97 Hills مشروع سكني من Palm Hills Developments في القاهرة الجديدة، بيضم Family Homes بجاردن أو بنتهاوس، وتاون هاوس، وفيلات مستقلة بمساحات مختلفة.",
-                "الـ Family Homes والتاون هاوس بتتسلم متشطبة بالكامل، والفيلات Core & Shell، والاستلام المتوقع في 2030. المشروع فيه كلوب هاوس وحمام سباحة ومساحات خضراء ومسارات للمشي والدراجات وممشى تجاري.",
+                "الـ Family Homes والتاون هاوس بتتسلم متشطبة بالكامل، والفيلات Core & Shell، والاستلام المتوقع في 2031. المشروع فيه كلوب هاوس وحمام سباحة ومساحات خضراء ومسارات للمشي والدراجات وممشى تجاري.",
             ],
             "en": [
                 "97 Hills is a residential project by Palm Hills Developments in New Cairo, with family homes with a garden or penthouse, town houses, and standalone villas in several sizes.",
-                "Family homes and town houses are delivered fully finished and villas core & shell, with delivery expected in 2030. The project includes a clubhouse, a pool, green spaces, walking and cycling trails and a commercial promenade.",
+                "Family homes and town houses are delivered fully finished and villas core & shell, with delivery expected in 2031. The project includes a clubhouse, a pool, green spaces, walking and cycling trails and a commercial promenade.",
             ],
         },
         "facts": [
             {"v": "2.8%", "ar": "مقدم التعاقد", "en": "down payment"},
             {"v": "10", "ar": "سنوات تقسيط", "en": "years installments"},
-            {"v": "2030", "ar": "الاستلام المتوقع", "en": "expected delivery"},
+            {"v": "2031", "ar": "الاستلام المتوقع", "en": "expected delivery"},
         ],
         "features": [
             {"ic": "house", "ar": ("Family Homes", "وحدات واسعة بجاردن خاص أو بنتهاوس بروف."),
