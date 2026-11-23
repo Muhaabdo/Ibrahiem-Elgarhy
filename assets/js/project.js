@@ -212,6 +212,25 @@
     });
   })();
   function countryByIso(iso) { for (var i = 0; i < COUNTRIES.length; i++) if (COUNTRIES[i].iso === iso) return COUNTRIES[i]; return COUNTRIES[0]; }
+  /* Default flag = the country of the device's time zone (read in the browser, no request);
+     anything unknown stays Egypt. */
+  var TZ_ISO = {
+    "Africa/Cairo": "EG", "Asia/Riyadh": "SA", "Asia/Dubai": "AE", "Asia/Kuwait": "KW", "Asia/Qatar": "QA",
+    "Asia/Bahrain": "BH", "Asia/Muscat": "OM", "Asia/Amman": "JO", "Asia/Beirut": "LB", "Africa/Tripoli": "LY",
+    "Africa/Khartoum": "SD", "Asia/Baghdad": "IQ", "Europe/London": "GB", "Europe/Dublin": "IE",
+    "Europe/Madrid": "ES", "Atlantic/Canary": "ES", "Europe/Paris": "FR", "Europe/Berlin": "DE",
+    "Europe/Amsterdam": "NL", "Europe/Brussels": "BE", "Europe/Rome": "IT", "Europe/Vienna": "AT",
+    "Europe/Zurich": "CH", "Europe/Stockholm": "SE", "Europe/Oslo": "NO", "Europe/Copenhagen": "DK",
+    "Europe/Lisbon": "PT", "Europe/Athens": "GR", "Europe/Warsaw": "PL", "Europe/Istanbul": "TR",
+    "America/New_York": "US", "America/Chicago": "US", "America/Denver": "US", "America/Los_Angeles": "US",
+    "America/Phoenix": "US", "America/Detroit": "US", "America/Toronto": "CA", "America/Vancouver": "CA",
+    "America/Edmonton": "CA", "America/Montreal": "CA", "Australia/Sydney": "AU", "Australia/Melbourne": "AU"
+  };
+  function deviceIso() {
+    var tz = "";
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    return TZ_ISO[tz] || "EG";
+  }
   function toLatinDigits(s) {
     return String(s).replace(/[٠-٩]/g, function (d) { return d.charCodeAt(0) - 0x0660; })
                     .replace(/[۰-۹]/g, function (d) { return d.charCodeAt(0) - 0x06F0; });
@@ -224,6 +243,10 @@
       var best = null;
       COUNTRIES.forEach(function (c) { if (d.indexOf(c.dial) === 0 && (!best || c.dial.length > best.dial.length)) best = c; });
       if (best) { if (best.dial !== country.dial) country = best; d = d.slice(best.dial.length); }
+    } else if (country.iso !== "EG" && /^01[0125]\d{8}$/.test(d)) {
+      /* Written as a full Egyptian mobile (01x + 8 digits) while another flag is selected — e.g. an
+         Egyptian abroad whose phone opened the form on that country. It is Egyptian. */
+      country = countryByIso("EG");
     } else if (d.indexOf(country.dial) === 0 && d.length > country.max) {
       d = d.slice(country.dial.length);
     }
@@ -240,7 +263,7 @@
     var phWrap = $(".ph", form), ccBtn = $(".ph-cc", form), pop = $(".cc-pop", form), list = $(".cc-list", form),
         search = $(".cc-search input", form), tel = $('input[type="tel"]', form), nameEl = $('input[name="name"]', form),
         unitEl = $('select[name="unit"]', form), submit = $(".lf-submit", form);
-    var country = countryByIso("EG"), built = false;
+    var country = countryByIso(deviceIso()), built = false;
 
     function setCountry(c) {
       country = c;
@@ -304,7 +327,7 @@
       if (unitVisible) { mark(unitEl, !unit); if (!unit) errs.push("unit"); }
       var loc = form.getAttribute("data-loc") || ctx.loc;
       if (errs.length) {
-        track("form_error", { form_location: loc, error_fields: errs.join(","), unit_type: unit });
+        track("form_error", { form_location: loc, error_fields: errs.join(","), unit_type: unit, phone_country: ph.country.iso });
         var firstBad = $(".bad input, .bad select", form); if (firstBad) firstBad.focus();
         return;
       }
