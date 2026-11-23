@@ -15,6 +15,15 @@
     return (T.waMsg || "").replace("{p}", project).replace("{u}", unit ? " — " + unit : "").replace("{d}", d);
   }
 
+  /* EEA (EU + IS, LI, NO) + UK + Switzerland. Unknown country counts as Europe (fail safe). */
+  var EUROPE = ",AT,BE,BG,HR,CY,CZ,DK,EE,FI,FR,DE,GR,HU,IE,IT,LV,LT,LU,MT,NL,PL,PT,RO,SK,SI,ES,SE,IS,LI,NO,GB,CH,";
+  function isEurope(iso) {
+    if (!iso || EUROPE.indexOf("," + String(iso).toUpperCase() + ",") !== -1) return true;
+    var tz = "";
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    return /^Europe\//.test(tz) || /^Atlantic\/(Canary|Madeira|Azores|Reykjavik|Faroe)$/.test(tz);
+  }
+
   var REDIRECT_MS = 1800;
   var $ = function (s) { return document.querySelector(s); };
   window.dataLayer = window.dataLayer || [];
@@ -56,8 +65,11 @@
   if (!lead.confirmed) {
     lead.confirmed = true;
     /* Enhanced conversions: the phone goes to GTM as user_data right before the conversion event
-       (Google hashes it before sending), then it is dropped from the browser's session storage. */
-    if (lead.phone) { window.dataLayer.push({ user_data: { phone_number: lead.phone } }); delete lead.phone; }
+       (Google hashes it before sending), then it is dropped from the browser's session storage.
+       No consent mode on this site, so user_data is NOT sent for European visitors (EEA + UK + CH):
+       skipped when the phone's country is European OR the browser's time zone is in Europe. */
+    if (lead.phone && !isEurope(lead.country)) window.dataLayer.push({ user_data: { phone_number: lead.phone } });
+    delete lead.phone;
     save(); push("thank_you_view");
   }
 

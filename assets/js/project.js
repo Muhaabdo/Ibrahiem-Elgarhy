@@ -346,7 +346,7 @@
         }
         try {
           sessionStorage.setItem("phd_lead", JSON.stringify({
-            project: project, unit: unit, lang: LANG, cta: loc, phone: lead.phone,
+            project: project, unit: unit, lang: LANG, cta: loc, phone: lead.phone, country: lead.country,
             back: location.pathname + location.search, backTitle: CFG.backTitle || project, ts: Date.now(),
             redirected: opened, newTab: opened
           }));
