@@ -6,6 +6,11 @@ CacheLookup off
 
 RewriteEngine On
 
+# www.palmhillsdev.com -> palmhillsdev.com (301, path and query kept). Without it the www host served
+# every page as a second copy and Google could index the www URLs instead of the canonical ones.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L,NE]
+
 # Home pages mapped to their files explicitly so the Cache-Control header below applies to them too.
 RewriteRule ^$ /index.html [L]
 RewriteRule ^en/$ /en/index.html [L]
